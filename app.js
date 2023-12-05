@@ -52,7 +52,7 @@ app.get('/projects/unbuilt', (req, res) => {
 });
 
 // Create Resend instance using environment variable
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API);
 
 // Route for sending emails
 app.post('/send-email', async (req, res) => {
