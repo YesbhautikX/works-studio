@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');  
 const { Resend } = require('resend');
-
+require('dotenv').config();
 const app = express();
 const port = 3000;
 
@@ -45,7 +45,7 @@ app.get('/projects/unbuilt', (req, res) => {
   res.render('projects/unbuilt');
 });
 
-const resend = new Resend('re_9R4trJ8s_9Yr7PF5hrEX2XGkDZAMdBaXx');
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post('/send-email', async (req, res) => {
   const { from, to, subject, html } = req.body;
