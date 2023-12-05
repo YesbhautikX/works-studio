@@ -21,8 +21,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
-    "build": "echo 'Implement your build commands here'"
+    "dev": "nodemon app.js"
+   
   },
   "keywords": [
     "Yesbhautik",
