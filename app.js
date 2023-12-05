@@ -1,16 +1,20 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');  
+const bodyParser = require('body-parser');
 const { Resend } = require('resend');
-require('dotenv').config();
+
 const app = express();
 const port = 3000;
 
+// Set view engine and views path
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(bodyParser.json());  
+// Middleware for parsing JSON
+app.use(bodyParser.json());
 
+// Middleware for handling CSS files
 app.use((req, res, next) => {
   if (req.originalUrl.endsWith('.css')) {
     res.type('.css');
@@ -18,9 +22,11 @@ app.use((req, res, next) => {
   next();
 });
 
+// Static file serving
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Routes
 app.get('/', (req, res) => {
   res.render('home');
 });
@@ -45,8 +51,10 @@ app.get('/projects/unbuilt', (req, res) => {
   res.render('projects/unbuilt');
 });
 
+// Create Resend instance using environment variable
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Route for sending emails
 app.post('/send-email', async (req, res) => {
   const { from, to, subject, html } = req.body;
 
@@ -65,9 +73,18 @@ app.post('/send-email', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+app.use((err, req, res, next) => {
+  console.error('Error:', err);
+  res.status(500).json({ error: 'Internal Server Error' });
+});
+
+// 404 Route
 app.use((req, res) => {
-    res.status(404).render('404');
-  });
+  res.status(404).render('404');
+});
+
+// Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
