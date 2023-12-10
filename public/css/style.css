@@ -28,3 +28,11 @@
   .text-area{
     resize: none;
   }
+
+  @media only screen and (max-width: 1350) {
+    
+    .success-message {
+      width: 100%;
+      margin-top: 23px;
+    }
+      }

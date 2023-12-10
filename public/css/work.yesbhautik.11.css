@@ -2815,6 +2815,8 @@ figcaption {
   background-color: #0c0c0c;
   color: #fff;
   text-align: left;
+  margin-top: 34px;
+  width: 70%;
 }
 
 .error-message {

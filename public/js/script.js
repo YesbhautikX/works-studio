@@ -1,8 +1,8 @@
 $(document).ready(function () {
+  $('.show-all').addClass('selected');
     $('.buttons-wrapper .button').on('click', function (e) {
       e.preventDefault();
       $('.category').removeClass('selected');
-
       $(this).addClass('selected');
       var category = $(this).attr('href');
       $('.grid .project-item').show();
