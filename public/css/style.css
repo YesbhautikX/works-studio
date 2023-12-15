@@ -21,24 +21,10 @@ font-size: 16px;
   background-color: #c1b761;
 }
 
-.Select-category.selected{
+.category.selected{
   color: #fff;
   background-color: transparent;
 }
 .text-area{
   resize: none;
-}
-.button{
-  cursor: pointer;
-}
-.subcategory-container{
-margin-top: 16px;
-}
-
-@media only screen and (max-width: 1350) {
-  
-.success-message {
-width: 100%;
-margin-top: 23px;
-}
 }
