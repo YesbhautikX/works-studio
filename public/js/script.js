@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".button").on("click", function (e) {
+  $(".buttons-wrapper .button").on("click", function (e) {
     e.preventDefault();
     $(".category").removeClass("selected");
 
@@ -21,7 +21,7 @@ $(document).ready(function () {
     var category = $(this).attr("href");
     $(".grid .project-item").show();
     $(".grid .project-item")
-      .has('.button[href="' + category + '"]')
+      .has('.buttons-wrapper .button[href="' + category + '"]')
       .show();
   });
 });
@@ -65,7 +65,7 @@ $(document).ready(function () {
   hideItems();
   showItems();
 
-  $(".button").on("click", function (e) {
+  $(".buttons-wrapper .button").on("click", function (e) {
     e.preventDefault();
     var category = $(this).attr("href");
 
