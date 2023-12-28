@@ -80,7 +80,7 @@ $(document).ready(function () {
       $(".load-more-button").show();
     } else {
       filteredItems = $(".grid .project-item").has(
-        '.button[href="' + category + '"]'
+        '.buttons-wrapper .button[href="' + category + '"]'
       );
       filteredItems.slice(0, itemsToShow).show();
       $(".load-more-button").toggle(filteredItems.length > itemsToShow);
