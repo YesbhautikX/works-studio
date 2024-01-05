@@ -81,17 +81,22 @@
       </div>
     </div>
   </div>
+
   <div class="section no-padding-top page-load-animation">
     <div class="container w-container">
       <div class="projects-collection-list w-dyn-list">
         <div role="list" class="grid w-dyn-items">
+          <% for(let i=0; i < data.length; i++) { %>
           <div
             role="listitem"
             class="project-item global-content-padding w-dyn-item"
           >
-            <a href="/projects/unbuilt" class="link-block w-inline-block"
+            <a
+              href="/projects/<%=data[i].name%>"
+              class="link-block w-inline-block"
               ><img
-                src="images/63d40558f3324d7d1eb5f530_Unbuilt_4.jpg"
+                src="data:image/<%=data[i].image.contentType%>;base64,
+                    <%=data[i].image.data.toString('base64')%>"
                 loading="lazy"
                 alt=""
                 sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
@@ -106,342 +111,69 @@
             /></a>
             <div class="project-description-wrapper">
               <div class="project-title-description-wrapper">
-                <a href="/projects/unbuilt" class="link-block w-inline-block">
-                  <h2>Unbuilt Website</h2>
+                <a
+                  href="/projects/<%=data[i].name%>"
+                  class="link-block w-inline-block"
+                >
+                  <h2><%= data[i].name %></h2>
                 </a>
                 <div class="tags-wrapper">
                   <div class="project-journal-tags-collection-list w-dyn-list">
                     <div role="list" class="buttons-wrapper w-dyn-items">
+                      <% for(let j=0; j < data[i].categories.length; j++) { %>
                       <div
                         role="listitem"
                         class="project-journal-tags-item w-dyn-item category"
                       >
                         <a
-                          href="/project-categories/graphic-design"
+                          href="/project-categories/<%= data[i].categories[j] %>"
                           class="button"
-                          >Graphic Design</a
+                          ><%= data[i].categories[j] %></a
                         >
                       </div>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/ui-ux" class="button"
-                          >UI/UX</a
-                        >
-                      </div>
+                      <% } %>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            role="listitem"
-            class="project-item global-content-padding w-dyn-item"
-          >
-            <a href="/projects/magic-app" class="link-block w-inline-block"
-              ><img
-                src="images/63d40e8b0d61bbe933691d9f_Magic_3.jpg"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
-                srcset="
-                  images/63d40e8b0d61bbe933691d9f_Magic_3-p-500.jpg   500w,
-                  images/63d40e8b0d61bbe933691d9f_Magic_3-p-800.jpg   800w,
-                  images/63d40e8b0d61bbe933691d9f_Magic_3-p-1080.jpg 1080w,
-                  images/63d40e8b0d61bbe933691d9f_Magic_3-p-1600.jpg 1600w,
-                  images/63d40e8b0d61bbe933691d9f_Magic_3.jpg        1800w
-                "
-                class="project-image"
-            /></a>
-            <div class="project-description-wrapper">
-              <div class="project-title-description-wrapper">
-                <a href="/projects/magic-app" class="link-block w-inline-block">
-                  <h2>Magic App</h2>
-                </a>
-                <div class="tags-wrapper">
-                  <div class="project-journal-tags-collection-list w-dyn-list">
-                    <div role="list" class="buttons-wrapper w-dyn-items">
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/web-design" class="button"
-                          >Web Design</a
-                        >
-                      </div>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/ui-ux" class="button"
-                          >UI/UX</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="listitem"
-            class="project-item global-content-padding w-dyn-item"
-          >
-            <a href="/projects/unbuilt" class="link-block w-inline-block"
-              ><img
-                src="images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
-                srcset="
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-500.jpg   500w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-800.jpg   800w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1080.jpg 1080w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1600.jpg 1600w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg        2000w
-                "
-                class="project-image"
-            /></a>
-            <div class="project-description-wrapper">
-              <div class="project-title-description-wrapper">
-                <a href="/projects/magic-app" class="link-block w-inline-block">
-                  <h2>Playfull</h2>
-                </a>
-                <div class="tags-wrapper">
-                  <div class="project-journal-tags-collection-list w-dyn-list">
-                    <div role="list" class="buttons-wrapper w-dyn-items">
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/ui-ux" class="button"
-                          >UI/UX</a
-                        >
-                      </div>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/web-design" class="button"
-                          >Web Design</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="listitem"
-            class="project-item global-content-padding w-dyn-item"
-          >
-            <a href="/projects/magic-app" class="link-block w-inline-block"
-              ><img
-                src="images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
-                srcset="
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-500.jpg   500w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-800.jpg   800w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1080.jpg 1080w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1600.jpg 1600w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg        2000w
-                "
-                class="project-image"
-            /></a>
-            <div class="project-description-wrapper">
-              <div class="project-title-description-wrapper">
-                <a href="/projects/unbuilt" class="link-block w-inline-block">
-                  <h2>Playfull</h2>
-                </a>
-                <div class="tags-wrapper">
-                  <div class="project-journal-tags-collection-list w-dyn-list">
-                    <div role="list" class="buttons-wrapper w-dyn-items">
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/ui-ux" class="button"
-                          >UI/UX</a
-                        >
-                      </div>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/web-design" class="button"
-                          >Web Design</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="listitem"
-            class="project-item global-content-padding w-dyn-item"
-          >
-            <a href="/projects/unbuilt" class="link-block w-inline-block"
-              ><img
-                src="images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
-                srcset="
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-500.jpg   500w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-800.jpg   800w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1080.jpg 1080w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1600.jpg 1600w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg        2000w
-                "
-                class="project-image"
-            /></a>
-            <div class="project-description-wrapper">
-              <div class="project-title-description-wrapper">
-                <a href="/projects/magic-app" class="link-block w-inline-block">
-                  <h2>Playfull</h2>
-                </a>
-                <div class="tags-wrapper">
-                  <div class="project-journal-tags-collection-list w-dyn-list">
-                    <div role="list" class="buttons-wrapper w-dyn-items">
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/ui-ux" class="button"
-                          >UI/UX</a
-                        >
-                      </div>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/web-design" class="button"
-                          >Web Design</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="listitem"
-            class="project-item global-content-padding w-dyn-item"
-          >
-            <a href="/projects/magic-app" class="link-block w-inline-block"
-              ><img
-                src="images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
-                srcset="
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-500.jpg   500w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-800.jpg   800w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1080.jpg 1080w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1600.jpg 1600w,
-                  images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg        2000w
-                "
-                class="project-image"
-            /></a>
-            <div class="project-description-wrapper">
-              <div class="project-title-description-wrapper">
-                <a href="/projects/unbuilt" class="link-block w-inline-block">
-                  <h2>Playfull</h2>
-                </a>
-                <div class="tags-wrapper">
-                  <div class="project-journal-tags-collection-list w-dyn-list">
-                    <div role="list" class="buttons-wrapper w-dyn-items">
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/ui-ux" class="button"
-                          >UI/UX</a
-                        >
-                      </div>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a href="/project-categories/web-design" class="button"
-                          >Web Design</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            role="listitem"
-            class="project-item global-content-padding w-dyn-item"
-          >
-            <a href="/projects/magic-app" class="link-block w-inline-block"
-              ><img
-                src="images/63d407e03e14308c840d37d3_Waves_4.jpg"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
-                srcset="
-                  images/63d407e03e14308c840d37d3_Waves_4-p-500.jpg   500w,
-                  images/63d407e03e14308c840d37d3_Waves_4-p-800.jpg   800w,
-                  images/63d407e03e14308c840d37d3_Waves_4-p-1080.jpg 1080w,
-                  images/63d407e03e14308c840d37d3_Waves_4-p-1600.jpg 1600w,
-                  images/63d407e03e14308c840d37d3_Waves_4.jpg        2000w
-                "
-                class="project-image"
-            /></a>
-            <div class="project-description-wrapper">
-              <div class="project-title-description-wrapper">
-                <a href="/projects/unbuilt" class="link-block w-inline-block">
-                  <h2>Web Waves</h2>
-                </a>
-                <div class="tags-wrapper">
-                  <div class="project-journal-tags-collection-list w-dyn-list">
-                    <div role="list" class="buttons-wrapper w-dyn-items">
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item"
-                      >
-                        <a
-                          href="/project-categories/art-direction"
-                          class="button"
-                          >Art Direction</a
-                        >
-                      </div>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item"
-                      >
-                        <a href="/project-categories/ui-ux" class="button"
-                          >UI/UX</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <% } %>
         </div>
       </div>
-      <div
-        class="link-block w-inline-block load-more-button"
-        onclick="loadMore()"
-      >
+      <div class="link-block w-inline-block">
         <div
           class="global-content-padding big-padding gradient-purple-center animate-gradient"
         >
-          <div class="text-align-center">Discover All Work</div>
+          <div>
+            <ul class="pagination justify-content-center">
+              <% if (hasPreviousPage) { %>
+              <li class="page-item">
+                <a class="page-link" href="?page=1">First Page</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="?page=<%= previousPage %>"
+                  ><%= previousPage %></a
+                >
+              </li>
+              <% } %>
+              <li class="page-item active">
+                <a class="page-link" href="?page=<%= currentPage %>"
+                  ><%= currentPage %></a
+                >
+              </li>
+              <% if (hasNextPage) { %>
+              <li class="page-item">
+                <a class="page-link" href="?page=<%= nextPage %>"
+                  ><%= nextPage %></a
+                >
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="?page=<%= lastPage %>">Last Page</a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

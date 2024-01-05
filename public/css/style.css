@@ -28,3 +28,24 @@
 .text-area {
   resize: none;
 }
+
+.link-block {
+  margin-top: 50px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pagination li {
+  list-style: none;
+}
+.pagination li a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.pagination li a:hover {
+  text-decoration: underline;
+}
