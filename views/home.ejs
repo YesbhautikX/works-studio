@@ -1,182 +1,297 @@
 <%- include('partials/header') %>
-<div class="main-wrapper">
-  <div class="section hero scroll">
-    <div class="container hero-section w-container">
-      <div class="global-content-padding margin-bottom gradient-yellow">
-        <div class="hero-container other-pages">
-          <h1>Work</h1>
-          <div class="w-dyn-list">
-            <div role="list" class="buttons-wrapper w-dyn-items">
-              <div role="listitem" class="w-dyn-item category">
-                <a href="#" class="button category show-all selected">All</a>
+  <div class="main-wrapper">
+    <div class="section hero scroll">
+      <div class="container hero-section w-container">
+        <div class="global-content-padding margin-bottom gradient-yellow">
+          <div class="hero-container other-pages">
+            <h1>Work</h1>
+            <div class="w-dyn-list ">
+              <div role="list" class="buttons-wrapper w-dyn-items">
+                <div role="listitem" class="w-dyn-item category main-category">
+                  <span class="button category show-all  Select-category">All</span>
+                </div>
+                <div role="listitem" class="w-dyn-item category main-category">
+                  <span class="button category ui-ux Select-category">UI/UX</span>
+                </div>
+                <div role="listitem" class="w-dyn-item category  main-category">
+                  <span class="button category web-design  Select-category">Web Design</span>
+                </div>
+                <div role="listitem" class="w-dyn-item category main-category" >
+                  <span class="button category graphic-design  Select-category">Graphic Design</span>
+                </div>
+                <div role="listitem" class="w-dyn-item category main-category">
+                  <span class="button category art-direction Select-category">Art Direction</span>
+                </div>
+               
+                     <!-- <span class="button show-all" id="go-back-button" style="display: none;">Back</span> -->
+                     <button class="backbutton show-all" id="go-back-button" style="display: none;"> 
+                      <div class="button-box">
+                        <span class="button-elem">
+                          <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                            ></path>
+                          </svg>
+                        </span>
+                        <!-- <span class="button-elem">
+                          <svg viewBox="0 0 46 40">
+                            <path
+                              d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                            ></path>
+                          </svg>
+                        </span> -->
+                      </div>
+                    </button>
+                    
+                 <!-- </div>
+               </div> -->
+                <div role="list" class="buttons-wrapper w-dyn-items subcategory-container">
+                  <div role="listitem" class="w-dyn-item subcategory ui-ux">
+                    <span class="button ui-ux all Select-category" data-category="Design1">All</span>
+                </div> 
+                  <div role="listitem" class="w-dyn-item subcategory ui-ux">
+                      <span class="button subcategory Select-category" data-category="Design1">Design 1</span>
+                  </div>
+                </div>
+                <div role="list" class="buttons-wrapper w-dyn-items subcategory-container ">
+                  <div role="listitem" class="w-dyn-item subcategory ui-ux">
+                    <span class="button ui-ux all Select-category" data-category="Design1">All</span>
+                </div> 
+                  <div role="listitem" class="w-dyn-item subcategory web-design">
+                    <span class="button subcategory Select-category" data-category="web1">Web Design1</span>
+                  </div>
+                  <div role="listitem" class="w-dyn-item subcategory web-design">
+                    <span class="button subcategory Select-category" data-category="web2">Web 2</span>
+                  </div>
+                  <div role="listitem" class="w-dyn-item subcategory web-design">
+                    <span class="button subcategory Select-category" data-category="web3">Web 3</span>
+                  </div>
+                </div>
+               
+                <div role="list" class="buttons-wrapper w-dyn-items subcategory-container subcategory-container-4">
+                  <div role="listitem" class="w-dyn-item subcategory ui-ux">
+                    <span class="button graphic-design Select-category all" data-category="Design1">All</span>
+                </div> 
+                  <div role="listitem" class="w-dyn-item subcategory graphic-design">
+                    <span class="button subcategory Select-category" data-category="app1">App 1</span>
+                  </div>
+                  <div role="listitem" class="w-dyn-item subcategory graphic-design">
+                    <span class="button subcategory Select-category" data-category="app2">App 2</span>
+                  </div>
+                  <div role="listitem" class="w-dyn-item subcategory graphic-design">
+                    <span class="button subcategory Select-category" data-category="app3">App 3</span>
+                  </div>
+                </div>
+                <div role="list" class="buttons-wrapper w-dyn-items subcategory-container">
+                  <div role="listitem" class="w-dyn-item subcategory ui-ux">
+                    <span class="button art-direction all Select-category" data-category="Design1">All</span>
+                </div> 
+                  <div role="listitem" class="w-dyn-item subcategory art-direction">
+                     <span class="button subcategory Select-category" data-category="art1">Art 1</span>
+                 </div>
+               </div>
+
+                </div>
+                <!-- <button class="button" id="go-back-button" style="display: none;">Back</button> -->
               </div>
-              <div role="listitem" class="w-dyn-item category">
-                <a
-                  href="/project-categories/art-direction"
-                  class="button category ad"
-                  >Art Direction</a
-                >
-              </div>
-              <div role="listitem" class="w-dyn-item category">
-                <a href="/project-categories/ui-ux" class="button category uiux"
-                  >UI/UX</a
-                >
-              </div>
-              <div role="listitem" class="w-dyn-item category">
-                <a
-                  href="/project-categories/graphic-design"
-                  class="button category gd"
-                  >Graphic Design</a
-                >
-              </div>
-              <div role="listitem" class="w-dyn-item category show-all">
-                <a
-                  href="/project-categories/web-design"
-                  class="button category wd"
-                >
-                  Web Design
-                </a>
               </div>
             </div>
-          </div>
-
-          <div
-            class="buttons-wrapper subcategory gd-subcategory"
-            style="display: none"
-          >
-            <a
-              href="/project-categories/graphic-design"
-              class="button category gd"
-            >
-              GD-1
-            </a>
-            <a
-              href="/project-categories/graphic-design"
-              class="button category gd"
-            >
-              GD-2
-            </a>
-            <a
-              href="/project-categories/graphic-design"
-              class="button category gd"
-            >
-              GD-3
-            </a>
-          </div>
-          <div
-            class="buttons-wrapper subcategory wd-subcategory"
-            style="display: none"
-          >
-            <a href="/project-categories/web-design" class="button category wd">
-              E-Commerce
-            </a>
-            <a href="/project-categories/web-design" class="button category wd">
-              Food Delivery
-            </a>
-            <a href="/project-categories/web-design" class="button category wd">
-              Social Media
-            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="section no-padding-top page-load-animation">
-    <div class="container w-container">
-      <div class="projects-collection-list w-dyn-list">
-        <div role="list" class="grid w-dyn-items">
-          <% for(let i=0; i < data.length; i++) { %>
-          <div
-            role="listitem"
-            class="project-item global-content-padding w-dyn-item"
-          >
-            <a
-              href="/projects/<%=data[i].name%>"
-              class="link-block w-inline-block"
-              ><img
-                src="data:image/<%=data[i].image.contentType%>;base64,
-                    <%=data[i].image.data.toString('base64')%>"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
-                srcset="
-                  images/63d40558f3324d7d1eb5f530_Unbuilt_4-p-500.jpg   500w,
-                  images/63d40558f3324d7d1eb5f530_Unbuilt_4-p-800.jpg   800w,
-                  images/63d40558f3324d7d1eb5f530_Unbuilt_4-p-1080.jpg 1080w,
-                  images/63d40558f3324d7d1eb5f530_Unbuilt_4-p-1600.jpg 1600w,
-                  images/63d40558f3324d7d1eb5f530_Unbuilt_4.jpg        2000w
-                "
-                class="project-image"
-            /></a>
-            <div class="project-description-wrapper">
-              <div class="project-title-description-wrapper">
-                <a
-                  href="/projects/<%=data[i].name%>"
-                  class="link-block w-inline-block"
-                >
-                  <h2><%= data[i].name %></h2>
-                </a>
-                <div class="tags-wrapper">
-                  <div class="project-journal-tags-collection-list w-dyn-list">
-                    <div role="list" class="buttons-wrapper w-dyn-items">
-                      <% for(let j=0; j < data[i].categories.length; j++) { %>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item category"
-                      >
-                        <a
-                          href="/project-categories/<%= data[i].categories[j] %>"
-                          class="button"
-                          ><%= data[i].categories[j] %></a
-                        >
+    <div class="section no-padding-top page-load-animation">
+      <div class="container w-container">
+        <div class="projects-collection-list w-dyn-list">
+          <div role="list" class="grid w-dyn-items">
+            <div role="listitem" class="project-item global-content-padding w-dyn-item" data-category="app1 Design1">
+              <a href="/projects/unbuilt" class="link-block w-inline-block">
+                <img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702353331/work.yesbhautik/wzr52ntaqkqnniaaikpc.webp" loading="lazy" alt=""
+                 
+                   class="project-image"></a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper">
+                  <a href="/projects/unbuilt" class="link-block w-inline-block">
+                    <h2 class="project-name">Unbuilt Website - App1</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category graphic-design">Graphic Design</span>
+                        </div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category ui-ux">UI/UX</span>
+                        </div>
                       </div>
-                      <% } %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="listitem" class="project-item global-content-padding w-dyn-item" data-category="web1 Design1">
+              <a href="/projects/magic-app" class="link-block w-inline-block">
+                <img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702353413/work.yesbhautik/itvk05ixovhanfer0weg.webp" loading="lazy" alt=""
+                  class="project-image">
+                </a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper"><a href="/projects/magic-app"
+                    class="link-block w-inline-block">
+                    <h2 class="project-name">Magic App- - Web1</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category web-design">Web Design</span>
+                        </div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category ui-ux">UI/UX</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="listitem" class="project-item global-content-padding w-dyn-item" data-category="Design1">
+              <a href="/projects/unbuilt" class="link-block w-inline-block">
+                <img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702308352/work.yesbhautik/n9gnnihlktgvkgtbuvdz.webp" loading="lazy" alt=""
+                  
+                  class="project-image">
+                </a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper"><a href="/projects/magic-app"
+                    class="link-block w-inline-block">
+                    <h2 class="project-name">Playfull - Design1</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category ui-ux">UI/UX</span>
+
+                        </div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category web-design">Web Design</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="listitem" class="project-item global-content-padding w-dyn-item" data-category="web2 Design1">
+              <a href="/projects/magic-app" class="link-block w-inline-block">
+                <img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702353515/work.yesbhautik/qpw6d1s943keleblfg5w.webp" loading="lazy" alt=""
+                 
+                  class="project-image">
+                </a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper"><a href="/projects/unbuilt"
+                    class="link-block w-inline-block">
+                    <h2 class="project-name">Playfull - Web2</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category ui-ux">UI/UX</span>
+                        </div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category web-design">Web Design</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="listitem" class="project-item global-content-padding w-dyn-item" data-category="web3 Design1">
+              <a href="/projects/unbuilt" class="link-block w-inline-block">
+                <img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702353413/work.yesbhautik/itvk05ixovhanfer0weg.webp" loading="lazy" alt="" sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw" 
+                  class="project-image">
+                </a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper"><a href="/projects/magic-app"
+                    class="link-block w-inline-block">
+                    <h2 class="project-name">Playfull - Web3</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category ui-ux">UI/UX</span>
+                        </div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category web-design">Web Design</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="listitem" class="project-item global-content-padding w-dyn-item" data-category="app2">
+              <a href="/projects/magic-app" class="link-block w-inline-block">
+                <img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702353515/work.yesbhautik/qpw6d1s943keleblfg5w.webp" loading="lazy" alt=""
+                  
+                    class="project-image">
+                </a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper"><a href="/projects/unbuilt"
+                    class="link-block w-inline-block">
+                    <h2 class="project-name">Playfull - App2</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category graphic-design">Graphic design</span>
+                        </div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item category">
+                          <span class="button category web-design">Web Design</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="listitem" class="project-item global-content-padding w-dyn-item" data-category="app3 art1">
+              <a href="/projects/magic-app" class="link-block w-inline-block">
+                <img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702308352/work.yesbhautik/n9gnnihlktgvkgtbuvdz.webp" loading="lazy" alt=""
+                 
+                   class="project-image">
+                </a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper"><a href="/projects/unbuilt"
+                    class="link-block w-inline-block">
+                    <h2 class="project-name">Web Waves - App3</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item">
+                          <span class="button category art-direction">Art Direction</span>
+                        </div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item">
+                          <span class="button category graphic-design">Graphic design</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <% } %>
         </div>
-      </div>
-      <div class="link-block w-inline-block">
-        <div
-          class="global-content-padding big-padding gradient-purple-center animate-gradient"
-        >
-          <div>
-            <ul class="pagination justify-content-center">
-              <% if (hasPreviousPage) { %>
-              <li class="page-item">
-                <a class="page-link" href="?page=1">First Page</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="?page=<%= previousPage %>"
-                  ><%= previousPage %></a
-                >
-              </li>
-              <% } %>
-              <li class="page-item active">
-                <a class="page-link" href="?page=<%= currentPage %>"
-                  ><%= currentPage %></a
-                >
-              </li>
-              <% if (hasNextPage) { %>
-              <li class="page-item">
-                <a class="page-link" href="?page=<%= nextPage %>"
-                  ><%= nextPage %></a
-                >
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="?page=<%= lastPage %>">Last Page</a>
-              </li>
-              <% } %>
-            </ul>
+        <div class="link-block w-inline-block load-more-button" >
+          <div class="global-content-padding big-padding gradient-purple-center animate-gradient">
+            <div class="text-align-center">Discover All Work</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <%- include('partials/footer') %>
-</div>
+    <%- include('partials/footer') %>

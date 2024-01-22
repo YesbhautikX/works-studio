@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
 
-  <div class="main-wrapper">
+<div class="main-wrapper">
     <div class="section hero wf-section">
       <div class="container hero-section w-container">
         <div class="global-content-padding margin-bottom gradient-blue">
@@ -19,17 +19,20 @@
             </div>
             <div id="w-node-_01e0fe94-f51d-7ea6-2716-0ff7d10f8d6f-2056c866" class="grid-block">
               <div class="w-form">
-                <form id="Contact-form" name="wf-form-Contact-form" data-name="Contact form" class="form-block"><label
-                    for="name">Name</label><input type="text" class="text-input w-input" maxlength="256" name="Name"
-                    data-name="Name" placeholder="" id="name"><label for="email">Email
-                    Address</label><input type="email" class="text-input w-input" maxlength="256" name="Email-Address"
-                    data-name="Email Address" placeholder="" id="email" required=""><label
-                    for="message">Message</label><textarea name="Message" maxlength="5000" data-name="Message"
+                <form id="Contact-form" name="wf-form-Contact-form" data-name="Contact form" class="form-block">
+                    <label for="name">Name</label>
+                    <input type="text" class="text-input w-input" maxlength="256" name="Name" data-name="Name" placeholder="" id="name"/>
+                    <label for="email">Email Address</label>
+                    <input type="email" class="text-input w-input" maxlength="256" name="Email-Address"
+                    data-name="Email Address" placeholder="" id="email" required/>
+                    <label for="message">Message</label>
+                    <textarea name="Message" maxlength="5000" data-name="Message"
                     placeholder="" id="message" class="text-area w-input"></textarea>
-                  <div class="spacer _15"></div><input type="submit" value="Send message" data-wait="Sending it"
+                    <div class="spacer _15"></div>
+                  <input type="submit" value="Send message" data-wait="Sending it"
                     class="button w-button">
                 </form>
-                <div id="successMessage" class="success-message w-form-done" style="display: none;">
+                <div id="successMessage" class="success-message w-form-done"  style="display: none;">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
                 <div id="errorMessage" class="error-message w-form-fail" style="display: none;">
@@ -57,6 +60,7 @@
         </div>
       </div>
     </div>
+  </div>
     <script>
       document.getElementById('Contact-form').addEventListener('submit', async function (event) {
         event.preventDefault();

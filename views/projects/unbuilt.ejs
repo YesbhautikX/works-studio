@@ -1,182 +1,147 @@
 <%- include('../partials/header') %>
-<div class="main-wrapper">
-  <div class="section hero">
-    <div class="container hero-section w-container">
-      <div class="global-content-padding margin-bottom gradient-grey">
-        <div class="hero-container other-pages">
-          <h1 class="text-align-center page-load-animation">
-            <%= data.name %>
-          </h1>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section no-padding-top">
-    <div class="container w-container">
-      <div class="projects-collection-list w-dyn-list">
-        <div role="list" class="projects-list w-dyn-items">
-          <div
-            role="listitem"
-            class="project-image-item w-dyn-item w-dyn-repeater-item"
-          >
-            <img
-              src="data:image/<%=data.image.contentType%>;base64,
-                    <%=data.image.data.toString('base64')%>"
-              loading="lazy"
-              alt=""
-              sizes="(max-width: 479px) 95vw, (max-width: 767px) 97vw, 95vw"
-              srcset="
-                /images/63d40558f3324d7d1eb5f530_Unbuilt_4-p-500.jpg   500w,
-                /images/63d40558f3324d7d1eb5f530_Unbuilt_4-p-800.jpg   800w,
-                /images/63d40558f3324d7d1eb5f530_Unbuilt_4-p-1080.jpg 1080w,
-                /images/63d40558f3324d7d1eb5f530_Unbuilt_4-p-1600.jpg 1600w,
-                /images/63d40558f3324d7d1eb5f530_Unbuilt_4.jpg        2000w
-              "
-              class="project-detail-image"
-            />
+  <div class="main-wrapper">
+    <div class="section hero">
+      <div class="container hero-section w-container">
+        <div class="global-content-padding margin-bottom gradient-grey">
+          <div class="hero-container other-pages">
+            <h1 class="text-align-center page-load-animation">Unbuilt Website</h1>
           </div>
         </div>
-        <div class="empty-state w-dyn-hide w-dyn-empty">
-          <div>No items found.</div>
+      </div>
+    </div>
+    <div class="section no-padding-top">
+      <div class="container w-container">
+        <div class="projects-collection-list w-dyn-list">
+          <div role="list" class="projects-list w-dyn-items">
+            <div role="listitem" class="project-image-item w-dyn-item w-dyn-repeater-item"><img
+                src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702308367/work.yesbhautik/zj80ucxrdplsexesgmov.webp" loading="lazy" alt=""
+                sizes="(max-width: 479px) 95vw, (max-width: 767px) 97vw, 95vw" class="project-detail-image"></div>
+            <div role="listitem" class="project-image-item w-dyn-item w-dyn-repeater-item"><img
+                src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702308358/work.yesbhautik/vohtpfffkb7epqxm7xbz.webp" loading="lazy" alt=""
+                sizes="(max-width: 479px) 95vw, (max-width: 767px) 97vw, 95vw" class="project-detail-image"></div>
+            <div role="listitem" class="project-image-item w-dyn-item w-dyn-repeater-item"><img
+                src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702308360/work.yesbhautik/st44ctjay4y5bs1tcuf7.webp" loading="lazy" alt=""
+                sizes="(max-width: 479px) 95vw, (max-width: 767px) 97vw, 95vw" class="project-detail-image"></div>
+            <div role="listitem" class="project-image-item w-dyn-item w-dyn-repeater-item"><img
+                src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702308362/work.yesbhautik/n2svcv98n3khyr96lmld.webp" loading="lazy" alt=""
+                sizes="(max-width: 479px) 95vw, (max-width: 767px) 97vw, 95vw" class="project-detail-image"></div>
+          </div>
+          <div class="empty-state w-dyn-hide w-dyn-empty">
+            <div>No items found.</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section">
-    <div class="container w-container">
-      <div class="global-content-padding">
-        <div class="w-layout-grid grid">
-          <div
-            id="w-node-f0f3cb78-f765-de25-d28f-8a1201bb2547-ad56c868"
-            class="grid-block"
-          >
-            <div class="project-info-wrapper">
-              <h6>Year</h6>
-              <p><%= data.year %></p>
-            </div>
-
-            <div class="project-info-wrapper">
-              <h6>Categories</h6>
-              <div class="project-journal-tags-collection-list w-dyn-list">
-                <div
-                  role="list"
-                  class="project-tags-list align-left w-dyn-items"
-                >
-                  <% for(let i=0; i < data.categories.length; i++) { %>
-                  <div
-                    role="listitem"
-                    class="project-journal-tags-item w-dyn-item"
-                  >
-                    <a href="/" class="button"><%= data.categories[i] %></a>
+    <div class="section">
+      <div class="container w-container">
+        <div class="global-content-padding">
+          <div class="w-layout-grid grid">
+            <div id="w-node-f0f3cb78-f765-de25-d28f-8a1201bb2547-ad56c868" class="grid-block">
+              <div class="project-info-wrapper">
+                <h6>Year</h6>
+                <p>2023</p>
+              </div>
+              <div class="project-info-wrapper">
+                <h6>Client</h6>
+                <p>Web Client</p>
+              </div>
+              <div class="project-info-wrapper">
+                <h6>Services</h6>
+                <div class="project-journal-tags-collection-list w-dyn-list">
+                  <div role="list" class="project-tags-list align-left w-dyn-items">
+                    <div role="listitem" class="project-journal-tags-item w-dyn-item"><a href="/" class="button">Graphic
+                        Design</a></div>
+                    <div role="listitem" class="project-journal-tags-item w-dyn-item"><a href="/"
+                        class="button">UI/UX</a></div>
                   </div>
-                  <% } %>
                 </div>
               </div>
-            </div>
-            <div class="project-info-wrapper">
-              <h6>Subcategories</h6>
-              <div class="project-journal-tags-collection-list w-dyn-list">
-                <div
-                  role="list"
-                  class="project-tags-list align-left w-dyn-items"
-                >
-                  <% for(let i=0; i < data.subcategories.length; i++) { %>
-                  <div
-                    role="listitem"
-                    class="project-journal-tags-item w-dyn-item"
-                  >
-                    <a href="/" class="button"><%= data.subcategories[i] %></a>
-                  </div>
-                  <% } %>
+              <div class="project-info-wrapper">
+                <div class="rich-text-block project-info w-richtext">
+                  <h6>Project Link</h6>
+                  <p><a href="https://yesbhautik.com/templates/designers/diogo-ferreira"
+                      target="_blank">unbuilt.website</a></p>
                 </div>
+                <h6>Client</h6>
+                <p>Web Client</p>
               </div>
             </div>
-
-            <div class="project-info-wrapper">
-              <div class="rich-text-block project-info w-richtext">
-                <h6>Project Link</h6>
-                <p>
-                  <a
-                    href="https://yesbhautik.com/templates/designers/diogo-ferreira"
-                    target="_blank"
-                    ><%= data.link %></a
-                  >
-                </p>
+            <div id="w-node-_50159510-f94b-e7a0-eb62-8e4baeeb278f-ad56c868" class="grid-block">
+              <p class="text-color-grey">Concept</p>
+              <div class="rich-text-block w-richtext">
+                <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla
+                  aliquet quam vitae dolor congue eleifend. Ut a convallis lacus, vitae consequat sem. Vivamus risus
+                  velit, iaculis sit amet maximus ac, ornare in tellus. Nullam non mauris molestie, commodo mi sed,
+                  auctor sapien. Etiam sit amet augue ac libero ornare tristique. Proin dictum felis a malesuada
+                  euismod. Duis hendrerit pretium ligula. </p>
+                <p>Duis rhoncus bibendum elit ac tristique. Mauris lacus nibh, sollicitudin quis magna a, accumsan
+                  consectetur diam. Phasellus ultricies mauris sed enim lacinia, quis aliquet justo lobortis.
+                  Curabitur bibendum risus vitae lectus mattis, eget tempus felis feugiat. </p>
+                <p>Sed tristique nunc eget mi placerat fringilla. In ac pulvinar magna. Suspendisse nec mi nec quam
+                  tristique fermentum eget non ligula. Morbi ac ligula nec dolor venenatis tempus. Donec bibendum
+                  nulla nibh, nec dignissim leo convallis tempus. Nam in congue velit. Duis facilisis neque non libero
+                  convallis, quis pulvinar leo pretium. </p>
               </div>
-              <h6>Client</h6>
-              <p>Web Client</p>
-            </div>
-          </div>
-          <div
-            id="w-node-_50159510-f94b-e7a0-eb62-8e4baeeb278f-ad56c868"
-            class="grid-block"
-          >
-            <p class="text-color-grey">Description</p>
-            <div class="rich-text-block w-richtext">
-              <p><%= data.description %></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section margin-top">
-    <div class="container w-container">
-      <div class="global-content-padding margin-bottom">
-        <h4 class="no-margin-bottom">Related Projects</h4>
-      </div>
-      <div class="projects-collection-list w-dyn-list">
-        <div role="list" class="grid w-dyn-items">
-          <% for(let i=0; i < items.length; i++) { %>
-          <div
-            role="listitem"
-            class="project-item global-content-padding w-dyn-item"
-          >
-            <a href="/projects/magic-app" class="link-block w-inline-block"
-              ><img
-                src="data:image/<%=items[i].image.contentType%>;base64,
-                    <%=items[i].image.data.toString('base64')%>"
-                loading="lazy"
-                alt=""
-                sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
-                srcset="
-                  /images/63d404bf25650b3ac5bd9e3e_Playful_2-p-500.jpg   500w,
-                  /images/63d404bf25650b3ac5bd9e3e_Playful_2-p-800.jpg   800w,
-                  /images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1080.jpg 1080w,
-                  /images/63d404bf25650b3ac5bd9e3e_Playful_2-p-1600.jpg 1600w,
-                  /images/63d404bf25650b3ac5bd9e3e_Playful_2.jpg        2000w
-                "
-                class="project-image"
-            /></a>
-            <div class="project-description-wrapper">
-              <div class="project-title-description-wrapper">
-                <a href="/projects/magic-app" class="link-block w-inline-block">
-                  <h2><%= items[i].name %></h2>
-                </a>
-                <div class="tags-wrapper">
-                  <div class="project-journal-tags-collection-list w-dyn-list">
-                    <div role="list" class="buttons-wrapper w-dyn-items">
-                      <% for(let j=0; j < items[i].categories.length; j++) { %>
-                      <div
-                        role="listitem"
-                        class="project-journal-tags-item w-dyn-item"
-                      >
-                        <a href="/" class="button"
-                          ><%= items[i].categories[j] %></a
-                        >
+    <div class="section margin-top">
+      <div class="container w-container">
+        <div class="global-content-padding margin-bottom">
+          <h4 class="no-margin-bottom">Related Projects</h4>
+        </div>
+        <div class="projects-collection-list w-dyn-list">
+          <div role="list" class="grid w-dyn-items">
+            <div role="listitem" class="project-item global-content-padding w-dyn-item"><a href="/projects/magic-app"
+                class="link-block w-inline-block"><img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702308352/work.yesbhautik/h51lmhbytheacrnm47zr.webp"
+                  loading="lazy" alt=""
+                  sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw"
+                 class="project-image"></a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper"><a href="/projects/magic-app"
+                    class="link-block w-inline-block">
+                    <h2>Playfull</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item"><a href="/"
+                            class="button">UI/UX</a></div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item"><a href="/" class="button">Web
+                            Design</a></div>
                       </div>
-                      <% } %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="listitem" class="project-item global-content-padding w-dyn-item"><a href="/projects/magic-app"
+                class="link-block w-inline-block"><img src="https://res.cloudinary.com/dl9rorn1z/image/upload/v1702308348/work.yesbhautik/ngpfibswg2clfelhbaq0.webp" loading="lazy"
+                  alt="" sizes="(max-width: 479px) 88vw, (max-width: 767px) 93vw, (max-width: 991px) 43vw, 42vw" class="project-image"></a>
+              <div class="project-description-wrapper">
+                <div class="project-title-description-wrapper"><a href="/projects/magic-app"
+                    class="link-block w-inline-block">
+                    <h2>Magic App</h2>
+                  </a>
+                  <div class="tags-wrapper">
+                    <div class="project-journal-tags-collection-list w-dyn-list">
+                      <div role="list" class="buttons-wrapper w-dyn-items">
+
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item"><a href="/"
+                            class="button">Graphic Design</a></div>
+                        <div role="listitem" class="project-journal-tags-item w-dyn-item"><a href="/"
+                            class="button">UI/UX</a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <% } %>
         </div>
+        <div class="spacer _15"></div>
       </div>
-      <div class="spacer _15"></div>
     </div>
-  </div>
-  <%- include('../partials/footer') %>
-</div>
+    <%- include('../partials/footer') %>
