@@ -79,7 +79,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact', { siteKey: process.env.TURNSTILE_SITE_KEY });
+  res.render('contact', { siteKey: process.env.CLOUDFLARE_TURNSTILE_KEY });
 });
 
 app.get('/404', (req, res) => {
@@ -127,7 +127,7 @@ app.get('/projects/:projectId', (req, res) => {
 
 app.post('/submit-form', async (req, res) => {
   const token = req.body['cf-turnstile-response'];
-  const secretKey = process.env.CLOUDFLARE_SECRET_KEY; // Use the secret key from .env
+  const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET; // Use the secret key from .env
 
   try {
     const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
@@ -194,7 +194,7 @@ app.get('/sitemap.xml', async (req, res) => {
   const allUrls = [...staticUrls, ...dynamicUrls];
 
   try {
-    const sitemapStream = new SitemapStream({ hostname: 'https://temp2-teal.vercel.app' });
+    const sitemapStream = new SitemapStream({ hostname: 'https://works.yesbhautikx.co.in/' });
     const xmlStream = new Readable({
       read() {
         allUrls.forEach(url => sitemapStream.write(url));
