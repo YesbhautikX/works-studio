@@ -48,6 +48,7 @@
     "mongoose": "^8.0.3",
     "multer": "^1.4.5-lts.1",
     "promisify": "^0.0.3",
-    "resend": "^2.0.0"
+    "resend": "^2.0.0",
+    "sitemap": "^7.1.1"
   }
 }

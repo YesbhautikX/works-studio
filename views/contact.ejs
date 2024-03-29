@@ -18,7 +18,7 @@
             </div>
             <div  class="grid-block">
               <div class="y-form">
-                <form id="Contact-form" name="yx-form-Contact-form" data-name="Contact form" class="form-block">
+                <form id="Contact-form" name="yx-form-Contact-form" data-name="Contact form" class="form-block" action="/submit-form" method="post">
                     <label for="name">Name</label>
                     <input type="text" class="text-input y-input" maxlength="256" name="Name" data-name="Name" placeholder="" id="name"/>
                     <label for="email">Email Address</label>
@@ -28,15 +28,15 @@
                     <textarea name="Message" maxlength="5000" data-name="Message"
                     placeholder="" id="message" class="text-area y-input"></textarea>
                     <div class="spacer _15"></div>
+                    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=<%= siteKey %>"></script>
+<div class="cf-turnstile" data-sitekey="<%= siteKey %>"></div>
                   <input type="submit" value="Send message" data-wait="Sending it"
                     class="button y-button">
                 </form>
                 <div id="successMessage" class="success-message y-form-done"  style="display: none;">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
-                <!-- <div id="errorMessage" class="error-message y-form-fail" style="display: none;">
-                  <div class="text-color-grey">Oops! Something went wrong while submitting the form.</div>
-                </div> -->
+               
               </div>
             </div>
           </div>

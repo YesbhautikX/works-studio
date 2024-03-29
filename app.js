@@ -48,6 +48,27 @@ app.post('/cloudinary-webhook', bodyParser.json(), (req, res) => {
 
 app.use(cloudinaryMiddleware);
 
+function dynamicTitle(req, res, next) {
+  // Set a default title for the home page
+  let title = "Works Studio"; // Default title for the home page
+
+  if (req.path !== "/") {
+      // Extract the file name from the path and capitalize the first letter
+      let fileName = req.path.split('/').pop(); // Get the last segment of the path
+      title = fileName.charAt(0).toUpperCase() + fileName.slice(1); // Capitalize the first letter
+  }
+
+  title += " - YesbhautikX";
+
+  res.locals.title = title;
+
+  
+  next();
+}
+
+// Apply the middleware to all routes
+app.use(dynamicTitle);
+
 // Routes
 app.get('/', (req, res) => {
   res.render('home', { projects: projectsData });
@@ -58,7 +79,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact');
+  res.render('contact', { siteKey: process.env.CLOUDFLARE_TURNSTILE_KEY });
 });
 
 app.get('/404', (req, res) => {
@@ -94,9 +115,41 @@ app.get('/projects/:projectId', (req, res) => {
   const project = projectsData.find(p => p.id === projectId);
 
   if (project) {
+    // Set the title before rendering the response
+    res.locals.title = `${project.name} - YesbhautikX`;
     res.render('project', { project: project });
   } else {
-    res.status(404).render('404'); 
+    // You might want to set a different title for the 404 page
+    res.locals.title = `Project Not Found - YesbhautikX`;
+    res.status(404).render('404');
+  }
+});
+
+app.post('/submit-form', async (req, res) => {
+  const token = req.body['cf-turnstile-response'];
+  const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET; // Use the secret key from .env
+
+  try {
+    const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
+      params: {
+        secret: secretKey,
+        response: token,
+      },
+    });
+
+    const verificationResult = response.data;
+
+    if (verificationResult.success) {
+      // CAPTCHA was successfully solved
+      // Proceed with form submission handling
+      res.send('CAPTCHA verified successfully!');
+    } else {
+      // CAPTCHA verification failed
+      res.status(400).send('CAPTCHA verification failed.');
+    }
+  } catch (error) {
+    console.error('CAPTCHA verification error:', error);
+    res.status(500).send('Server error during CAPTCHA verification.');
   }
 });
 
@@ -120,6 +173,43 @@ app.post('/send-email', async (req, res) => {
   } catch (error) {
     console.error('An unexpected error occurred:', error);
     res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+const { SitemapStream, streamToPromise } = require('sitemap');
+const { Readable } = require('stream');
+
+app.get('/sitemap.xml', async (req, res) => {
+  const staticUrls = [
+    { url: '/', changefreq: 'daily', priority: 0.7 },
+    { url: '/about', changefreq: 'monthly', priority: 0.6 },
+    { url: '/contact', changefreq: 'monthly', priority: 0.6 },
+  ];
+
+  // Generate dynamic URLs from your projectsData
+  const dynamicUrls = projectsData.map(project => ({
+    url: `/projects/${project.id}`, changefreq: 'weekly', priority: 0.8
+  }));
+
+  const allUrls = [...staticUrls, ...dynamicUrls];
+
+  try {
+    const sitemapStream = new SitemapStream({ hostname: 'https://works.yesbhautikx.co.in' });
+    const xmlStream = new Readable({
+      read() {
+        allUrls.forEach(url => sitemapStream.write(url));
+        sitemapStream.end();
+      }
+    });
+
+    // Collect the sitemap xml content and send it in the response
+    streamToPromise(xmlStream.pipe(sitemapStream)).then(data => {
+      res.header('Content-Type', 'application/xml');
+      res.send(data.toString());
+    });
+  } catch (error) {
+    console.error('Sitemap generation error:', error);
+    res.status(500).send('Error generating sitemap');
   }
 });
 

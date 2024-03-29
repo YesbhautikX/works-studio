@@ -303,8 +303,8 @@ const projects = [
    
   },
   {
-    id: 'project9',
-    name: 'App1',
+    id: 'ui/ux',
+    name: 'UI/UX',
     images: [
       '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
       '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
@@ -318,12 +318,12 @@ const projects = [
     projectLink: 'https://unbuilt.website',
     concept: 'Concept text for Unbuilt Website...',
     category: 'graphic-design',
-    subcategory: 'app1'
+    subcategory: 'ui/ux'
 
   },
   {
-    id: 'project11',
-    name: 'App2',
+    id: 'brand-kit',
+    name: 'Brand Kit',
     images: [
       '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
       '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
@@ -337,12 +337,11 @@ const projects = [
     projectLink: 'https://unbuilt.website',
     concept: 'Concept text for Unbuilt Website...',
     category: 'graphic-design',
-    subcategory: 'app2'
-
+    subcategory: 'brand-kit'
   },
   {
-    id: 'project13',
-    name: 'App3',
+    id: 'mockups',
+    name: 'Mockups',
     images: [
       '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
       '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
@@ -356,12 +355,12 @@ const projects = [
     projectLink: 'https://unbuilt.website',
     concept: 'Concept text for Unbuilt Website...',
     category: 'graphic-design',
-    subcategory: 'app3'
+    subcategory: 'mockups'
 
   },
   {
-    id: 'project15',
-    name: 'App2',
+    id: 'logo',
+    name: 'Logo',
     images: [
       '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
       '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
@@ -375,12 +374,12 @@ const projects = [
     projectLink: 'https://unbuilt.website',
     concept: 'Concept text for Unbuilt Website...',
     category: 'graphic-design',
-    subcategory: 'app2'
+    subcategory: 'logo'
 
   },
   {
-    id: 'project16',
-    name: 'Design1',
+    id: 'business-card',
+    name: 'Business Card',
     images: [
       '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
       '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
@@ -393,13 +392,13 @@ const projects = [
     services: ['Graphic Design', 'UI/UX'],
     projectLink: 'https://unbuilt.website',
     concept: 'Concept text for Unbuilt Website...',
-    category: 'ui-ux',
-    subcategory: 'Design1'
+    category: 'graphic-design',
+    subcategory: 'business-card'
 
   },
   {
-    id: 'project19',
-    name: 'Art1 Website',
+    id: 'posters',
+    name: 'Posters',
     images: [
       '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
       '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
@@ -412,13 +411,13 @@ const projects = [
     services: ['Graphic Design', 'UI/UX'],
     projectLink: 'https://unbuilt.website',
     concept: 'Concept text for Unbuilt Website...',
-    category: 'art-direction',
-    subcategory: 'art1'
+    category: 'graphic-design',
+    subcategory: 'posters'
 
   },
   {
-    id: 'project21',
-    name: 'Art2 Website',
+    id: 'ai-magic',
+    name: 'Ai Magic',
     images: [
       '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
       '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
@@ -431,8 +430,46 @@ const projects = [
     services: ['Graphic Design', 'UI/UX'],
     projectLink: 'https://unbuilt.website',
     concept: 'Concept text for Unbuilt Website...',
-    category: 'art-direction',
-    subcategory: 'art2'
+    category: 'ai',
+    subcategory: 'ai-magic'
+
+  },
+  {
+    id: 'whatsapp-bot',
+    name: 'Whatsapp bot',
+    images: [
+      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
+      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
+      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
+      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
+      // ... other image URLs
+    ],
+    year: '2023',
+    client: 'Web Client',
+    services: ['Graphic Design', 'UI/UX'],
+    projectLink: 'https://unbuilt.website',
+    concept: 'Concept text for Unbuilt Website...',
+    category: 'chatbot',
+    subcategory: 'whatsapp-bot'
+
+  },
+  {
+    id: 'telegram-bot',
+    name: 'Telegram bot',
+    images: [
+      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
+      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
+      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
+      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
+      // ... other image URLs
+    ],
+    year: '2023',
+    client: 'Web Client',
+    services: ['Graphic Design', 'UI/UX'],
+    projectLink: 'https://unbuilt.website',
+    concept: 'Concept text for Unbuilt Website...',
+    category: 'chatbot',
+    subcategory: 'telegram-bot'
 
   },
 ];
