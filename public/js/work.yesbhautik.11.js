@@ -152,7 +152,7 @@
           // eslint-disable-next-line no-restricted-globals -- safe
           check(typeof self == "object" && self) ||
           check(typeof global == "object" && global) ||
-          // eslint-disable-next-line no-new-func -- fallback
+          // eslint-disable-next-line no-ney-func -- fallback
           (function () {
             return this;
           })() ||
@@ -211,7 +211,7 @@
     /* 3 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals window, document, navigator, yesbhautik_ENV_TEST */
 
@@ -2226,7 +2226,7 @@
     /* 39 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals window, document */
 
@@ -2246,7 +2246,7 @@
 
       var $ = window.jQuery;
       var api = {};
-      var namespace = ".w-ix";
+      var namespace = ".y-ix";
       var eventTriggers = {
         reset: function reset(i, el) {
           IXEvents.triggers.reset(i, el);
@@ -2262,8 +2262,8 @@
       };
       api.triggers = {};
       api.types = {
-        INTRO: "w-ix-intro" + namespace,
-        OUTRO: "w-ix-outro" + namespace,
+        INTRO: "y-ix-intro" + namespace,
+        OUTRO: "y-ix-outro" + namespace,
       };
       $.extend(api.triggers, eventTriggers);
       module.exports = api;
@@ -3824,7 +3824,7 @@
     /* 69 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* eslint-disable eslint-comments/no-unlimited-disable */
 
@@ -7825,7 +7825,7 @@
               ),
               // $FlowFixMe - Remove this attribute on beta launch
               reducedMotion:
-                document.body.hasAttribute("data-wf-ix-vacation") &&
+                document.body.hasAttribute("data-yx-ix-vacation") &&
                 window.matchMedia("(prefers-reduced-motion)").matches,
             })
           );
@@ -9070,7 +9070,7 @@
     /* 130 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals document, window, navigator */
 
@@ -9089,7 +9089,7 @@
           var doc = document;
           var $html = $("html");
           var $body = $("body");
-          var namespace = ".w-yesbhautik-badge";
+          var namespace = ".y-yesbhautik-badge";
           var location = window.location;
           var isPhantom = /PhantomJS/i.test(navigator.userAgent);
           var fullScreenEvents =
@@ -9098,8 +9098,8 @@
           // Module methods
 
           api.ready = function () {
-            var shouldBrand = $html.attr("data-wf-status");
-            var publishedDomain = $html.attr("data-wf-domain") || "";
+            var shouldBrand = $html.attr("data-yx-status");
+            var publishedDomain = $html.attr("data-yx-domain") || "";
 
             if (
               /\.yesbhautik\.io$/i.test(publishedDomain) &&
@@ -9132,7 +9132,7 @@
           }
 
           // function createBadge() {
-          //   var $brand = $('<a class="w-yesbhautik-badge"></a>').attr('href', 'https://yesbhautik.com?utm_campaign=brandjs');
+          //   var $brand = $('<a class="y-yesbhautik-badge"></a>').attr('href', 'https://yesbhautik.com?utm_campaign=brandjs');
           //   var $logoArt = $('<img>').attr('src', 'https://d3e54v103j8qbb.cloudfront.net/img/yesbhautik-badge-icon.f67cd735e3.svg').attr('alt', '').css({
           //     marginRight: '8px',
           //     width: '16px'
@@ -9174,7 +9174,7 @@
     /* 131 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
       // Include tram for frame-throttling
 
       /* globals window */
@@ -9541,7 +9541,7 @@
             "return __p;\n";
 
           try {
-            // eslint-disable-next-line no-new-func
+            // eslint-disable-next-line no-ney-func
             var render = new Function(settings.variable || "obj", "_", source);
           } catch (e) {
             e.source = source;
@@ -9566,7 +9566,7 @@
     /* 132 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals document, window, localStorage, yesbhautik_API_HOST, yesbhautik_DEFAULT_HOST */
 
@@ -9647,7 +9647,7 @@
                   "https://editor-api.yesbhautik.com" + "/api/editor/view"
                 ),
                 data: {
-                  siteId: $html.attr("data-wf-site"),
+                  siteId: $html.attr("data-yx-site"),
                 },
                 xhrFields: {
                   withCredentials: true,
@@ -9747,7 +9747,7 @@
     /* 133 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals window, document */
 
@@ -9843,19 +9843,19 @@
             }
 
             function addFocusVisibleAttribute(el) {
-              if (el.getAttribute("data-wf-focus-visible")) {
+              if (el.getAttribute("data-yx-focus-visible")) {
                 return;
               }
 
-              el.setAttribute("data-wf-focus-visible", "true");
+              el.setAttribute("data-yx-focus-visible", "true");
             }
 
             function removeFocusVisibleAttribute(el) {
-              if (!el.getAttribute("data-wf-focus-visible")) {
+              if (!el.getAttribute("data-yx-focus-visible")) {
                 return;
               }
 
-              el.removeAttribute("data-wf-focus-visible");
+              el.removeAttribute("data-yx-focus-visible");
             }
             /**
              * If the most recent user interaction was via the keyboard;
@@ -9917,7 +9917,7 @@
                 return;
               }
 
-              if (e.target.hasAttribute("data-wf-focus-visible")) {
+              if (e.target.hasAttribute("data-yx-focus-visible")) {
                 // To detect a tab/window switch, we look for a blur event followed
                 // rapidly by a visibility change.
                 // If we don't see a visibility change within 100ms, it's probably a
@@ -10044,7 +10044,7 @@
     /* 134 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals window, document */
 
@@ -10082,23 +10082,23 @@
           function addFocusWithinAttribute(el) {
             if (
               typeof el.getAttribute !== "function" ||
-              el.getAttribute("data-wf-focus-within")
+              el.getAttribute("data-yx-focus-within")
             ) {
               return;
             }
 
-            el.setAttribute("data-wf-focus-within", "true");
+            el.setAttribute("data-yx-focus-within", "true");
           }
 
           function removeFocusWithinAttribute(el) {
             if (
               typeof el.getAttribute !== "function" ||
-              !el.getAttribute("data-wf-focus-within")
+              !el.getAttribute("data-yx-focus-within")
             ) {
               return;
             }
 
-            el.removeAttribute("data-wf-focus-within");
+            el.removeAttribute("data-yx-focus-within");
           }
           /**
            * Attach event listerns to initiate polyfill
@@ -10145,7 +10145,7 @@
           function ready() {
             if (
               typeof document !== "undefined" &&
-              document.body.hasAttribute("data-wf-focus-within")
+              document.body.hasAttribute("data-yx-focus-within")
             ) {
               try {
                 // check for native support; this will throw if the selector is not considered valid
@@ -10167,7 +10167,7 @@
     /* 135 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals document, MouseEvent */
 
@@ -10263,7 +10263,7 @@
           function ready() {
             if (
               typeof document !== "undefined" &&
-              document.body.hasAttribute("data-wf-focus-within") &&
+              document.body.hasAttribute("data-yx-focus-within") &&
               yesbhautik.env.safari
             ) {
               document.addEventListener("mousedown", handler, true);
@@ -10283,7 +10283,7 @@
     /* 136 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals window */
 
@@ -10297,7 +10297,7 @@
       var $ = window.jQuery;
       var api = {};
       var eventQueue = [];
-      var namespace = ".w-ix";
+      var namespace = ".y-ix";
       var eventTriggers = {
         reset: function reset(i, el) {
           el.__wf_intro = null;
@@ -10321,8 +10321,8 @@
       };
       api.triggers = {};
       api.types = {
-        INTRO: "w-ix-intro" + namespace,
-        OUTRO: "w-ix-outro" + namespace,
+        INTRO: "y-ix-intro" + namespace,
+        OUTRO: "y-ix-outro" + namespace,
       }; // Trigger any events in queue + restore trigger methods
 
       api.init = function () {
@@ -10359,7 +10359,7 @@
     /* 137 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* eslint-disable no-var */
 
@@ -12057,13 +12057,13 @@
           void 0;
       var IX2_ID_DELIMITER = "|";
       exports.IX2_ID_DELIMITER = IX2_ID_DELIMITER;
-      var WF_PAGE = "data-wf-page";
+      var WF_PAGE = "data-yx-page";
       exports.WF_PAGE = WF_PAGE;
-      var W_MOD_JS = "w-mod-js";
+      var W_MOD_JS = "y-mod-js";
       exports.W_MOD_JS = W_MOD_JS;
-      var W_MOD_IX = "w-mod-ix";
+      var W_MOD_IX = "y-mod-ix";
       exports.W_MOD_IX = W_MOD_IX;
-      var BOUNDARY_SELECTOR = ".w-dyn-item";
+      var BOUNDARY_SELECTOR = ".y-dyn-item";
       exports.BOUNDARY_SELECTOR = BOUNDARY_SELECTOR;
       var CONFIG_X_VALUE = "xValue";
       exports.CONFIG_X_VALUE = CONFIG_X_VALUE;
@@ -18833,8 +18833,8 @@
             }
           }
 
-          return '[data-w-id="'
-            .concat(nodeId, '"], [data-w-id^="')
+          return '[data-y-id="'
+            .concat(nodeId, '"], [data-y-id^="')
             .concat(nodeId, '_instance"]');
         }
 
@@ -20752,7 +20752,7 @@
     /* 332 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals window, document */
 
@@ -20773,7 +20773,7 @@
           var inApp = yesbhautik.env();
           var location = window.location;
           var tempLink = document.createElement("a");
-          var linkCurrent = "w--current";
+          var linkCurrent = "y--current";
           var indexPage = /index\.(html|php)$/;
           var dirList = /\/$/;
           var anchors;
@@ -20894,7 +20894,7 @@
     /* 333 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals window, document */
 
@@ -20917,8 +20917,8 @@
            * @typedef {Object.<string>} NamespacedEventsCollection
            */
           var NS_EVENTS = {
-            WF_CLICK_EMPTY: "click.wf-empty-link",
-            WF_CLICK_SCROLL: "click.wf-scroll",
+            WF_CLICK_EMPTY: "click.yx-empty-link",
+            WF_CLICK_SCROLL: "click.yx-scroll",
           };
           var loc = window.location;
           var history = inIframe() ? null : window.history;
@@ -20934,13 +20934,13 @@
               window.setTimeout(fn, 15);
             };
 
-          var rootTag = yesbhautik.env("editor") ? ".w-editor-body" : "body";
+          var rootTag = yesbhautik.env("editor") ? ".y-editor-body" : "body";
           var headerSelector =
             "header, " +
             rootTag +
             " > .header, " +
             rootTag +
-            " > .w-nav:not([data-no-scroll])";
+            " > .y-nav:not([data-no-scroll])";
           var emptyHrefSelector = 'a[href="#"]';
           /**
            * Select only links whose href:
@@ -20950,9 +20950,9 @@
            */
 
           var localHrefSelector =
-            'a[href*="#"]:not(.w-tab-link):not(' + emptyHrefSelector + ")";
+            'a[href*="#"]:not(.y-tab-link):not(' + emptyHrefSelector + ")";
           var scrollTargetOutlineCSS =
-            '.wf-force-outline-none[tabindex="-1"]:focus{outline:none;}';
+            '.yx-force-outline-none[tabindex="-1"]:focus{outline:none;}';
           var focusStylesEl = document.createElement("style");
           focusStylesEl.appendChild(
             document.createTextNode(scrollTargetOutlineCSS)
@@ -20990,7 +20990,7 @@
 
           function reducedMotionEnabled() {
             return (
-              document.body.getAttribute("data-wf-scroll-motion") === "none" ||
+              document.body.getAttribute("data-yx-scroll-motion") === "none" ||
               reducedMotionMediaQuery.matches
             );
           }
@@ -21003,7 +21003,7 @@
                 initialTabindex = $el.attr("tabindex");
 
                 if (initialTabindex) {
-                  $el.attr("data-wf-tabindex-swap", initialTabindex);
+                  $el.attr("data-yx-tabindex-swap", initialTabindex);
                 } else {
                   $el.attr("tabindex", "-1");
                 }
@@ -21011,11 +21011,11 @@
                 break;
 
               case "remove":
-                initialTabindex = $el.attr("data-wf-tabindex-swap");
+                initialTabindex = $el.attr("data-yx-tabindex-swap");
 
                 if (initialTabindex) {
                   $el.attr("tabindex", initialTabindex);
-                  $el.removeAttr("data-wf-tabindex-swap");
+                  $el.removeAttr("data-yx-tabindex-swap");
                 } else {
                   $el.removeAttr("tabindex");
                 }
@@ -21023,7 +21023,7 @@
                 break;
             }
 
-            $el.toggleClass("wf-force-outline-none", action === "add");
+            $el.toggleClass("yx-force-outline-none", action === "add");
           }
           /**
            * Determine if we should execute custom scroll
@@ -21189,7 +21189,7 @@
     /* 334 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals document, window */
 
@@ -21334,7 +21334,7 @@
     /* 335 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals
   window,
@@ -21364,7 +21364,7 @@
           var $forms;
           var loc = window.location;
           var retro = window.XDomainRequest && !window.atob;
-          var namespace = ".w-form";
+          var namespace = ".y-form";
           var siteId;
           var emailField = /e(-)?mail/i;
           var emailValue = /^\S+@\S+$/;
@@ -21395,7 +21395,7 @@
               };
 
           function init() {
-            siteId = $("html").attr("data-wf-site");
+            siteId = $("html").attr("data-yx-site");
             formUrl = "https://yesbhautik.com" + "/api/v1/form/" + siteId; // Work around same-protocol IE XDR limitation - without this IE9 and below forms won't submit
 
             if (retro && formUrl.indexOf("https://yesbhautik.com") >= 0) {
@@ -21427,10 +21427,10 @@
             } // data.form
 
             reset(data);
-            var wrap = $el.closest("div.w-form");
-            data.done = wrap.find("> .w-form-done");
-            data.fail = wrap.find("> .w-form-fail");
-            data.fileUploads = wrap.find(".w-file-upload");
+            var wrap = $el.closest("div.y-form");
+            data.done = wrap.find("> .y-form-done");
+            data.fail = wrap.find("> .y-form-fail");
+            data.fileUploads = wrap.find(".y-file-upload");
             data.fileUploads.each(function (j) {
               initFileUpload(j, data);
             }); // Accessiblity fixes
@@ -21494,13 +21494,13 @@
               }
             }); // handle checked ui for custom checkbox and radio button
 
-            var CHECKBOX_CLASS_NAME = ".w-checkbox-input";
-            var RADIO_INPUT_CLASS_NAME = ".w-radio-input";
-            var CHECKED_CLASS = "w--redirected-checked";
-            var FOCUSED_CLASS = "w--redirected-focus";
-            var FOCUSED_VISIBLE_CLASS = "w--redirected-focus-visible";
+            var CHECKBOX_CLASS_NAME = ".y-checkbox-input";
+            var RADIO_INPUT_CLASS_NAME = ".y-radio-input";
+            var CHECKED_CLASS = "y--redirected-checked";
+            var FOCUSED_CLASS = "y--redirected-focus";
+            var FOCUSED_VISIBLE_CLASS = "y--redirected-focus-visible";
             var focusVisibleSelectors =
-              ":focus-visible, [data-wf-focus-visible]";
+              ":focus-visible, [data-yx-focus-visible]";
             var CUSTOM_CONTROLS = [
               ["checkbox", CHECKBOX_CLASS_NAME],
               ["radio", RADIO_INPUT_CLASS_NAME],
@@ -21532,7 +21532,7 @@
                 });
                 var $target = $(evt.target);
 
-                if (!$target.hasClass("w-radio-input")) {
+                if (!$target.hasClass("y-radio-input")) {
                   $target
                     .siblings(RADIO_INPUT_CLASS_NAME)
                     .addClass(CHECKED_CLASS);
@@ -21723,7 +21723,7 @@
               ),
               trackingCookies: collectEnterpriseTrackingCookies(),
             };
-            var wfFlow = form.attr("data-wf-flow");
+            var wfFlow = form.attr("data-yx-flow");
 
             if (wfFlow) {
               payload.wfFlow = wfFlow;
@@ -21740,7 +21740,7 @@
             payload.fileUploads = findFileUploads(form); // Disable submit button
 
             disableBtn(data); // Read site ID
-            // NOTE: If this site is exported, the HTML tag must retain the data-wf-site attribute for forms to work
+            // NOTE: If this site is exported, the HTML tag must retain the data-yx-site attribute for forms to work
 
             if (!siteId) {
               afterSubmit(data);
@@ -21877,20 +21877,20 @@
 
             var file;
             var $el = $(form.fileUploads[i]);
-            var $defaultWrap = $el.find("> .w-file-upload-default");
-            var $uploadingWrap = $el.find("> .w-file-upload-uploading");
-            var $successWrap = $el.find("> .w-file-upload-success");
-            var $errorWrap = $el.find("> .w-file-upload-error");
-            var $input = $defaultWrap.find(".w-file-upload-input");
-            var $label = $defaultWrap.find(".w-file-upload-label");
+            var $defaultWrap = $el.find("> .y-file-upload-default");
+            var $uploadingWrap = $el.find("> .y-file-upload-uploading");
+            var $successWrap = $el.find("> .y-file-upload-success");
+            var $errorWrap = $el.find("> .y-file-upload-error");
+            var $input = $defaultWrap.find(".y-file-upload-input");
+            var $label = $defaultWrap.find(".y-file-upload-label");
             var $labelChildren = $label.children();
-            var $errorMsgEl = $errorWrap.find(".w-file-upload-error-msg");
-            var $fileEl = $successWrap.find(".w-file-upload-file");
-            var $removeEl = $successWrap.find(".w-file-remove-link");
-            var $fileNameEl = $fileEl.find(".w-file-upload-file-name");
-            var sizeErrMsg = $errorMsgEl.attr("data-w-size-error");
-            var typeErrMsg = $errorMsgEl.attr("data-w-type-error");
-            var genericErrMsg = $errorMsgEl.attr("data-w-generic-error"); // Accessiblity fixes
+            var $errorMsgEl = $errorWrap.find(".y-file-upload-error-msg");
+            var $fileEl = $successWrap.find(".y-file-upload-file");
+            var $removeEl = $successWrap.find(".y-file-remove-link");
+            var $fileNameEl = $fileEl.find(".y-file-upload-file-name");
+            var sizeErrMsg = $errorMsgEl.attr("data-y-size-error");
+            var typeErrMsg = $errorMsgEl.attr("data-y-type-error");
+            var genericErrMsg = $errorMsgEl.attr("data-y-generic-error"); // Accessiblity fixes
             // The file upload Input is not stylable by the designer, so we are
             // going to pretend the Label is the input. ¯\_(ツ)_/¯
 
@@ -21905,9 +21905,9 @@
               });
             } // Both of these are added through CSS
 
-            $label.find(".w-icon-file-upload-icon").attr("aria-hidden", "true");
+            $label.find(".y-icon-file-upload-icon").attr("aria-hidden", "true");
             $removeEl
-              .find(".w-icon-file-upload-remove")
+              .find(".y-icon-file-upload-remove")
               .attr("aria-hidden", "true");
 
             if (!inApp) {
@@ -22160,7 +22160,7 @@
     /* 340 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* globals window, document */
 
@@ -22198,13 +22198,13 @@
           var designer;
           var inEditor;
           var inApp = yesbhautik.env();
-          var overlay = '<div class="w-nav-overlay" data-wf-ignore />';
-          var namespace = ".w-nav";
-          var navbarOpenedButton = "w--open";
-          var navbarOpenedDropdown = "w--nav-dropdown-open";
-          var navbarOpenedDropdownToggle = "w--nav-dropdown-toggle-open";
-          var navbarOpenedDropdownList = "w--nav-dropdown-list-open";
-          var navbarOpenedLink = "w--nav-link-open";
+          var overlay = '<div class="y-nav-overlay" data-yx-ignore />';
+          var namespace = ".y-nav";
+          var navbarOpenedButton = "y--open";
+          var navbarOpenedDropdown = "y--nav-dropdown-open";
+          var navbarOpenedDropdownToggle = "y--nav-dropdown-toggle-open";
+          var navbarOpenedDropdownList = "y--nav-dropdown-list-open";
+          var navbarOpenedLink = "y--nav-link-open";
           var ix = IXEvents.triggers;
           var menuSibling = $(); // -----------------------------------
           // Module methods
@@ -22264,18 +22264,18 @@
               });
             }
 
-            data.menu = $el.find(".w-nav-menu");
-            data.links = data.menu.find(".w-nav-link");
-            data.dropdowns = data.menu.find(".w-dropdown");
-            data.dropdownToggle = data.menu.find(".w-dropdown-toggle");
-            data.dropdownList = data.menu.find(".w-dropdown-list");
-            data.button = $el.find(".w-nav-button");
-            data.container = $el.find(".w-container");
-            data.overlayContainerId = "w-nav-overlay-" + i;
+            data.menu = $el.find(".y-nav-menu");
+            data.links = data.menu.find(".y-nav-link");
+            data.dropdowns = data.menu.find(".y-dropdown");
+            data.dropdownToggle = data.menu.find(".y-dropdown-toggle");
+            data.dropdownList = data.menu.find(".y-dropdown-list");
+            data.button = $el.find(".y-nav-button");
+            data.container = $el.find(".y-container");
+            data.overlayContainerId = "y-nav-overlay-" + i;
             data.outside = outside(data); //   If the brand links exists and is set to link to the homepage, the
             // default setting, then add an aria-label
 
-            var navBrandLink = $el.find(".w-nav-brand");
+            var navBrandLink = $el.find(".y-nav-brand");
 
             if (
               navBrandLink &&
@@ -22534,7 +22534,7 @@
 
               if (
                 inEditor &&
-                $target.closest(".w-editor-bem-EditorOverlay").length
+                $target.closest(".y-editor-bem-EditorOverlay").length
               ) {
                 return;
               } // Close menu when clicked outside, debounced to wait for state
@@ -22548,7 +22548,7 @@
               return;
             }
 
-            var menu = $target.closest(".w-nav-menu");
+            var menu = $target.closest(".y-nav-menu");
 
             if (!data.menu.is(menu)) {
               close(data);
@@ -22769,7 +22769,7 @@
                 data.overlay.attr("style", "").hide();
               } // Trigger event so other components can hook in (dropdown)
 
-              data.el.triggerHandler("w-close");
+              data.el.triggerHandler("y-close");
               data.button.attr("aria-expanded", "false");
             }
           } // Export module
@@ -22783,7 +22783,7 @@
     /* 341 */
     /***/ function (module, exports, __webpack_require__) {
       "use strict";
-      // @wf-will-never-add-flow-to-this-file
+      // @yx-will-never-add-flow-to-this-file
 
       /* global document window */
 
@@ -22808,11 +22808,11 @@
           var env = yesbhautik.env;
           var safari = env.safari;
           var inApp = env();
-          var tabAttr = "data-w-tab";
-          var paneAttr = "data-w-pane";
-          var namespace = ".w-tabs";
-          var linkCurrent = "w--current";
-          var tabActive = "w--tab-active";
+          var tabAttr = "data-y-tab";
+          var paneAttr = "data-y-pane";
+          var namespace = ".y-tabs";
+          var linkCurrent = "y--current";
+          var tabActive = "y--tab-active";
           var ix = IXEvents.triggers;
           var inRedraw = false; // -----------------------------------
           // Module methods
@@ -22891,10 +22891,10 @@
             data.current = null;
             data.tabIdentifier = widgetHash + "-" + tabAttr;
             data.paneIdentifier = widgetHash + "-" + paneAttr;
-            data.menu = $el.children(".w-tab-menu");
-            data.links = data.menu.children(".w-tab-link");
-            data.content = $el.children(".w-tab-content");
-            data.panes = data.content.children(".w-tab-pane"); // Remove old events
+            data.menu = $el.children(".y-tab-menu");
+            data.links = data.menu.children(".y-tab-link");
+            data.content = $el.children(".y-tab-content");
+            data.panes = data.content.children(".y-tab-pane"); // Remove old events
 
             data.el.off(namespace);
             data.links.off(namespace); // This role is necessary in the ARIA spec

@@ -1,8 +1,7 @@
 <%- include('partials/header') %>
-
 <div class="main-wrapper">
-    <div class="section hero wf-section">
-      <div class="container hero-section w-container">
+    <div class="section hero yx-section">
+      <div class="container hero-section y-container">
         <div class="global-content-padding margin-bottom gradient-blue">
           <div class="hero-container other-pages">
             <h1>Contact</h1>
@@ -10,45 +9,48 @@
         </div>
       </div>
     </div>
-    <div class="section no-padding-top wf-section">
-      <div class="container w-container">
+    <div class="section no-padding-top yx-section">
+      <div class="container y-container">
         <div class="global-content-padding margin-bottom">
-          <div class="w-layout-grid grid">
-            <div id="w-node-_07fa261c-8f5f-9381-2d02-012c3dfe8995-2056c866" class="grid-block">
+          <div class="y-layout-grid grid">
+            <div  class="grid-block">
               <div class="text-size-big text-color-grey">Email</div>
             </div>
-            <div id="w-node-_01e0fe94-f51d-7ea6-2716-0ff7d10f8d6f-2056c866" class="grid-block">
-              <div class="w-form">
-                <form id="Contact-form" name="wf-form-Contact-form" data-name="Contact form" class="form-block">
+            <div  class="grid-block">
+              <div class="y-form">
+                <form id="Contact-form" name="yx-form-Contact-form" data-name="Contact form" class="form-block">
                     <label for="name">Name</label>
-                    <input type="text" class="text-input w-input" maxlength="256" name="Name" data-name="Name" placeholder="" id="name"/>
+                    <input type="text" class="text-input y-input" maxlength="256" name="Name" data-name="Name" placeholder="" id="name"/>
                     <label for="email">Email Address</label>
-                    <input type="email" class="text-input w-input" maxlength="256" name="Email-Address"
+                    <input type="email" class="text-input y-input" maxlength="256" name="Email-Address"
                     data-name="Email Address" placeholder="" id="email" required/>
                     <label for="message">Message</label>
                     <textarea name="Message" maxlength="5000" data-name="Message"
-                    placeholder="" id="message" class="text-area w-input"></textarea>
+                    placeholder="" id="message" class="text-area y-input"></textarea>
                     <div class="spacer _15"></div>
                   <input type="submit" value="Send message" data-wait="Sending it"
-                    class="button w-button">
+                    class="button y-button">
                 </form>
-                <div id="successMessage" class="success-message w-form-done"  style="display: none;">
+                <div id="successMessage" class="success-message y-form-done"  style="display: none;">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
+                <!-- <div id="errorMessage" class="error-message y-form-fail" style="display: none;">
+                  <div class="text-color-grey">Oops! Something went wrong while submitting the form.</div>
+                </div> -->
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="section wf-section">
-      <div class="container w-container">
+    <div class="section yx-section">
+      <div class="container y-container">
         <div class="global-content-padding">
-          <div class="w-layout-grid grid">
-            <div id="w-node-_5de1d822-51f9-f201-32d0-ac0e8d664209-2056c866" class="grid-block">
+          <div class="y-layout-grid grid">
+            <div id="y-node-_5de1d822-51f9-f201-32d0-ac0e8d664209-2056c866" class="grid-block">
               <div class="text-size-big text-color-grey">Social Media</div>
             </div>
-            <div id="w-node-_5de1d822-51f9-f201-32d0-ac0e8d66420c-2056c866" class="grid-block"><a
+            <div id="y-node-_5de1d822-51f9-f201-32d0-ac0e8d66420c-2056c866" class="grid-block"><a
                 href="http://www.instagram.com" target="_blank" class="no-decoration-link all-width">Instagram</a><a
                 href="http://www.linkedin.com" target="_blank" class="no-decoration-link all-width">LinkedIn</a><a
                 href="http://www.behance.com" target="_blank" class="no-decoration-link all-width">Behance</a><a
@@ -59,43 +61,43 @@
     </div>
   </div>
     <script>
-      document.getElementById('Contact-form').addEventListener('submit', async function (event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        try {
-          const response = await fetch('/send-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
+        document.getElementById('Contact-form').addEventListener('submit', async function (event) {
+    event.preventDefault();
+  
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+  
+    try {
+      const response = await fetch('/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
               from: 'works@yesbhautik.co.in',
               to: 'bhbavadiya2608@gmail.com',
               subject: 'Contact Form Submission',
               html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
             }),
-          });
-
-          const data = await response.json();
-
-          if (response.ok) {
-
-            document.getElementById('successMessage').style.display = 'block';
-            document.getElementById('errorMessage').style.display = 'none';
-            document.getElementById('Contact-form').reset();
-          } else {
-            console.error('Error sending email:', data.error);
-
-          }
-        } catch (error) {
-          console.error('An unexpected error occurred:', error);
-        }
       });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
 
+        document.getElementById('successMessage').style.display = 'block';
+        document.getElementById('errorMessage').style.display = 'none';
+        document.getElementById('Contact-form').reset();
+      } else {
+        console.error('Error sending email:', data.error);
+  
+      }
+    } catch (error) {
+      console.error('An unexpected error occurred:', error);
+    }
+  });
+  
     </script>
+  <%- include('partials/footer') %>
 
-    <%- include('partials/footer') %>

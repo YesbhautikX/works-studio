@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+<div class="main-wrapper">
+    <div class="section hero">
+        <div class="container hero-section y-container">
+          <div class="global-content-padding margin-bottom gradient-grey">
+            <div class="hero-container other-pages">
+              <h1 class="text-align-center page-load-animation"><%= project.name %></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+  <div class="section no-padding-top">
+    <div class="container y-container">
+      <div class="projects-collection-list y-dyn-list">
+        <div role="list" class="projects-list y-dyn-items">
+          <% project.images.forEach(function(image) { %>
+            <div role="listitem" class="project-image-item y-dyn-item y-dyn-repeater-item">
+              <img src="<%= image %>" loading="lazy" alt="" sizes="(max-width: 479px) 95vw, (max-width: 767px) 97vw, 95vw" class="project-detail-image">
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ... -->
+  <div class="section">
+    <div class="container y-container">
+      <div class="global-content-padding">
+        <div class="y-layout-grid grid">
+          <div class="grid-block">
+            <!-- Project Information -->
+            <div class="project-info-wrapper">
+              <h6>Year</h6>
+              <p><%= project.year %></p>
+            </div>
+            <div class="project-info-wrapper">
+              <h6>Client</h6>
+              <p><%= project.client %></p>
+            </div>
+            <div class="project-info-wrapper">
+              <h6>Services</h6>
+              <% project.services.forEach(function(service) { %>
+                <a href="/" class="button"><%= service %></a>
+              <% }); %>
+            </div>
+            <div class="project-info-wrapper">
+              <h6>Project</h6>
+              <p><a href="<%= project.projectLink %>" target="_blank"><%= project.name %></a></p>
+            </div>
+            <!-- ... -->
+          </div>
+          <div class="grid-block">
+            <p class="text-color-grey">Concept</p>
+            <div class="rich-text-block y-richtext">
+              <%- project.concept.split("\n\n").map(paragraph => `<p>${paragraph}</p>`).join("") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ... -->
+</div>
+<%- include('partials/footer') %>
