@@ -154,9 +154,49 @@ app.get('/projects/:projectId', (req, res) => {
 // });
 
 // Create Resend instance using environment variable
-const resend = new Resend(process.env.RESEND_API);
+// const resend = new Resend(process.env.RESEND_API);
+// app.post('/submit-form', async (req, res) => {
+//   // Extracting CAPTCHA token and form data from the request body
+//   const { 'cf-turnstile-response': token, name, email, message } = req.body;
+//   const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET; // Use the secret key from .env
 
-// Route for sending emails
+//   try {
+//     // First, verify the CAPTCHA
+//     const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
+//       params: {
+//         secret: secretKey,
+//         response: token,
+//       },
+//     });
+
+//     const verificationResult = response.data;
+
+//     if (verificationResult.success) {
+//       // CAPTCHA was successfully solved, now proceed with sending an email
+//       const { data, error } = await resend.emails.send({
+//         from: 'works@yesbhautik.co.in',
+//         to: 'yashu.shah28@gmail.com',
+//         subject: 'Contact Form Submission',
+//         html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
+//       });
+
+//       if (error) {
+//         console.error('Error sending email:', error);
+//         return res.status(500).json({ error: 'Internal Server Error while sending email' });
+//       } else {
+//         // Email sent successfully
+//         return res.json({ success: true, message: 'CAPTCHA verified and email sent successfully!' });
+//       }
+//     } else {
+//       // CAPTCHA verification failed
+//       return res.status(400).send('CAPTCHA verification failed.');
+//     }
+//   } catch (error) {
+//     console.error('Error during CAPTCHA verification or email sending:', error);
+//     return res.status(500).send('Server error during CAPTCHA verification or email sending.');
+//   }
+// });
+
 // app.post('/send-email', async (req, res) => {
 //   const { from, to, subject, html } = req.body;
 
@@ -175,48 +215,7 @@ const resend = new Resend(process.env.RESEND_API);
 //     res.status(500).json({ error: 'Internal Server Error' });
 //   }
 // });
-app.post('/submit-form', async (req, res) => {
-  const { 'cf-turnstile-response': token, name, email, message } = req.body;
-  const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET;
 
-  try {
-    // First, verify the CAPTCHA
-    const verificationResponse = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
-      params: {
-        secret: secretKey,
-        response: token,
-      },
-    });
-
-    const verificationResult = verificationResponse.data;
-
-    if (verificationResult.success) {
-      // CAPTCHA was successfully solved, now proceed with sending an email
-      const emailContent = {
-        from: 'works@yesbhautik.co.in', // The sender's email address
-        to: 'yashu.shah28@gmail.com', // The recipient's email address, submitted by the form
-        subject: 'Contact Form Submission',
-        html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`, // The email content
-      };
-
-      const { data, error } = await resend.emails.send(emailContent);
-
-      if (error) {
-        console.error('Error sending email:', error);
-        return res.status(500).json({ error: 'Internal Server Error while sending email' });
-      } else {
-        // Email sent successfully
-        return res.json({ success: true, message: 'CAPTCHA verified and email sent successfully!' });
-      }
-    } else {
-      // CAPTCHA verification failed
-      return res.status(400).send('CAPTCHA verification failed.');
-    }
-  } catch (error) {
-    console.error('Error during CAPTCHA verification or email sending:', error);
-    return res.status(500).send('Server error during CAPTCHA verification or email sending.');
-  }
-});
 
 const { SitemapStream, streamToPromise } = require('sitemap');
 const { Readable } = require('stream');
