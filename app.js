@@ -79,7 +79,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact', { siteKey: process.env.CLOUDFLARE_TURNSTILE_KEY });
+  res.render('contact', { siteKey: process.env.TURNSTILE_SITE_KEY });
 });
 
 app.get('/404', (req, res) => {
@@ -125,97 +125,56 @@ app.get('/projects/:projectId', (req, res) => {
   }
 });
 
-// app.post('/submit-form', async (req, res) => {
-//   const token = req.body['cf-turnstile-response'];
-//   const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET; // Use the secret key from .env
+app.post('/submit-form', async (req, res) => {
+  const token = req.body['cf-turnstile-response'];
+  const secretKey = process.env.CLOUDFLARE_SECRET_KEY; // Use the secret key from .env
 
-//   try {
-//     const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
-//       params: {
-//         secret: secretKey,
-//         response: token,
-//       },
-//     });
+  try {
+    const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
+      params: {
+        secret: secretKey,
+        response: token,
+      },
+    });
 
-//     const verificationResult = response.data;
+    const verificationResult = response.data;
 
-//     if (verificationResult.success) {
-//       // CAPTCHA was successfully solved
-//       // Proceed with form submission handling
-//       res.send('CAPTCHA verified successfully!');
-//     } else {
-//       // CAPTCHA verification failed
-//       res.status(400).send('CAPTCHA verification failed.');
-//     }
-//   } catch (error) {
-//     console.error('CAPTCHA verification error:', error);
-//     res.status(500).send('Server error during CAPTCHA verification.');
-//   }
-// });
+    if (verificationResult.success) {
+      // CAPTCHA was successfully solved
+      // Proceed with form submission handling
+      res.send('CAPTCHA verified successfully!');
+    } else {
+      // CAPTCHA verification failed
+      res.status(400).send('CAPTCHA verification failed.');
+    }
+  } catch (error) {
+    console.error('CAPTCHA verification error:', error);
+    res.status(500).send('Server error during CAPTCHA verification.');
+  }
+});
 
 // Create Resend instance using environment variable
-// const resend = new Resend(process.env.RESEND_API);
-// app.post('/submit-form', async (req, res) => {
-//   // Extracting CAPTCHA token and form data from the request body
-//   const { 'cf-turnstile-response': token, name, email, message } = req.body;
-//   const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET; // Use the secret key from .env
+const resend = new Resend(process.env.RESEND_API);
 
-//   try {
-//     // First, verify the CAPTCHA
-//     const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
-//       params: {
-//         secret: secretKey,
-//         response: token,
-//       },
-//     });
+// Route for sending emails
+app.post('/send-email', async (req, res) => {
+  const { from, to, subject, html } = req.body;
 
-//     const verificationResult = response.data;
+  try {
+    const { data, error } = await resend.emails.send({ from, to, subject, html });
 
-//     if (verificationResult.success) {
-//       // CAPTCHA was successfully solved, now proceed with sending an email
-//       const { data, error } = await resend.emails.send({
-//         from: 'works@yesbhautik.co.in',
-//         to: 'yashu.shah28@gmail.com',
-//         subject: 'Contact Form Submission',
-//         html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
-//       });
-
-//       if (error) {
-//         console.error('Error sending email:', error);
-//         return res.status(500).json({ error: 'Internal Server Error while sending email' });
-//       } else {
-//         // Email sent successfully
-//         return res.json({ success: true, message: 'CAPTCHA verified and email sent successfully!' });
-//       }
-//     } else {
-//       // CAPTCHA verification failed
-//       return res.status(400).send('CAPTCHA verification failed.');
-//     }
-//   } catch (error) {
-//     console.error('Error during CAPTCHA verification or email sending:', error);
-//     return res.status(500).send('Server error during CAPTCHA verification or email sending.');
-//   }
-// });
-
-// app.post('/send-email', async (req, res) => {
-//   const { from, to, subject, html } = req.body;
-
-//   try {
-//     const { data, error } = await resend.emails.send({ from, to, subject, html });
-
-//     if (error) {
-//       console.error('Error sending email:', error);
-//       res.status(500).json({ error: 'Internal Server Error' });
-//     } else {
-//       // console.log('Email sent successfully:', data);
-//       res.json({ success: true });
-//     }
-//   } catch (error) {
-//     console.error('An unexpected error occurred:', error);
-//     res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
-
+    if (error) {
+      console.error('Error sending email:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+      // console.log('Email sent successfully:', data);
+      res.json({ success: true });
+    }
+  } catch (error) {
+    console.error('An unexpected error occurred:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 const { SitemapStream, streamToPromise } = require('sitemap');
 const { Readable } = require('stream');
@@ -235,7 +194,7 @@ app.get('/sitemap.xml', async (req, res) => {
   const allUrls = [...staticUrls, ...dynamicUrls];
 
   try {
-    const sitemapStream = new SitemapStream({ hostname: 'https://works.yesbhautikx.co.in' });
+    const sitemapStream = new SitemapStream({ hostname: 'https://temp2-teal.vercel.app' });
     const xmlStream = new Readable({
       read() {
         allUrls.forEach(url => sitemapStream.write(url));

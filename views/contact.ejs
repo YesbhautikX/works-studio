@@ -27,17 +27,18 @@
                     <label for="message">Message</label>
                     <textarea name="Message" maxlength="5000" data-name="Message"
                     placeholder="" id="message" class="text-area y-input"></textarea>
-                    <!-- <div class="spacer _15"></div>
+                    <div class="spacer _15"></div>
                     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=<%= siteKey %>"></script>
 <div class="cf-turnstile" data-sitekey="<%= siteKey %>"></div>
-<div class="spacer _15"></div> -->
                   <input type="submit" value="Send message" data-wait="Sending it"
                     class="button y-button">
                 </form>
                 <div id="successMessage" class="success-message y-form-done"  style="display: none;">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
-               
+                <!-- <div id="errorMessage" class="error-message y-form-fail" style="display: none;">
+                  <div class="text-color-grey">Oops! Something went wrong while submitting the form.</div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -61,44 +62,44 @@
       </div>
     </div>
   </div>
-  <!-- <script>
-    document.getElementById('Contact-form').addEventListener('submit', async function (event) {
-event.preventDefault();
+    <script>
+        document.getElementById('Contact-form').addEventListener('submit', async function (event) {
+    event.preventDefault();
+  
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+  
+    try {
+      const response = await fetch('/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: 'works@yesbhautik.co.in',
+          to: 'bhbavadiya2608@gmail.com',
+          subject: 'Contact Form Submission',
+          html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
 
-const name = document.getElementById('name').value;
-const email = document.getElementById('email').value;
-const message = document.getElementById('message').value;
-
-try {
-  const response = await fetch('/send-email', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: 'works@yesbhautik.co.in',
-      to: 'bhbavadiya2608@gmail.com',
-      subject: 'Contact Form Submission',
-      html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
-    }),
+        document.getElementById('successMessage').style.display = 'block';
+        document.getElementById('errorMessage').style.display = 'none';
+        document.getElementById('Contact-form').reset();
+      } else {
+        console.error('Error sending email:', data.error);
+  
+      }
+    } catch (error) {
+      console.error('An unexpected error occurred:', error);
+    }
   });
-
-  const data = await response.json();
-
-  if (response.ok) {
-
-    document.getElementById('successMessage').style.display = 'block';
-    document.getElementById('errorMessage').style.display = 'none';
-    document.getElementById('Contact-form').reset();
-  } else {
-    console.error('Error sending email:', data.error);
-
-  }
-} catch (error) {
-  console.error('An unexpected error occurred:', error);
-}
-});
-
-</script> -->
+  
+    </script>
   <%- include('partials/footer') %>
 
