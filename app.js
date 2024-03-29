@@ -9,7 +9,7 @@ const fs = require('fs');
 const cloudinary = require('cloudinary').v2;
 const { promisify } = require('util');
 const app = express();
-const port = 3001;
+const port = 3000;
 const { setupWatcher, uploadExistingImages, imageExistenceCache } = require('./cloudinaryManager');
 const cloudinaryMiddleware = require('./cloudinaryMiddleware');
 
@@ -79,7 +79,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-  res.render('contact', { siteKey: process.env.CLOUDFLARE_TURNSTILE_KEY });
+  res.render('contact', { siteKey: process.env.TURNSTILE_SITE_KEY });
 });
 
 app.get('/404', (req, res) => {
@@ -127,7 +127,7 @@ app.get('/projects/:projectId', (req, res) => {
 
 app.post('/submit-form', async (req, res) => {
   const token = req.body['cf-turnstile-response'];
-  const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET; // Use the secret key from .env
+  const secretKey = process.env.CLOUDFLARE_SECRET_KEY; // Use the secret key from .env
 
   try {
     const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
@@ -154,7 +154,7 @@ app.post('/submit-form', async (req, res) => {
 });
 
 // Create Resend instance using environment variable
-const resend = new Resend(process.env.RESEND_API);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Route for sending emails
 app.post('/send-email', async (req, res) => {
@@ -194,7 +194,7 @@ app.get('/sitemap.xml', async (req, res) => {
   const allUrls = [...staticUrls, ...dynamicUrls];
 
   try {
-    const sitemapStream = new SitemapStream({ hostname: 'https://works.yesbhautikx.co.in/' });
+    const sitemapStream = new SitemapStream({ hostname: 'https://works.yesbhautikx.co.in' });
     const xmlStream = new Readable({
       read() {
         allUrls.forEach(url => sitemapStream.write(url));

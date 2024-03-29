@@ -59,7 +59,7 @@ cloudinary.config({
         imageExistenceCache[publicId] = false;
       }
     } catch (error) {
-      console.error(`Error deleting image with Public ID: ${publicId}`, error);
+      // console.error(`Error deleting image with Public ID: ${publicId}`, error);
     }
   }
   
