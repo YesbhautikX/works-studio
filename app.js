@@ -125,54 +125,96 @@ app.get('/projects/:projectId', (req, res) => {
   }
 });
 
+// app.post('/submit-form', async (req, res) => {
+//   const token = req.body['cf-turnstile-response'];
+//   const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET; // Use the secret key from .env
+
+//   try {
+//     const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
+//       params: {
+//         secret: secretKey,
+//         response: token,
+//       },
+//     });
+
+//     const verificationResult = response.data;
+
+//     if (verificationResult.success) {
+//       // CAPTCHA was successfully solved
+//       // Proceed with form submission handling
+//       res.send('CAPTCHA verified successfully!');
+//     } else {
+//       // CAPTCHA verification failed
+//       res.status(400).send('CAPTCHA verification failed.');
+//     }
+//   } catch (error) {
+//     console.error('CAPTCHA verification error:', error);
+//     res.status(500).send('Server error during CAPTCHA verification.');
+//   }
+// });
+
+// Create Resend instance using environment variable
+const resend = new Resend(process.env.RESEND_API);
+
+// Route for sending emails
+// app.post('/send-email', async (req, res) => {
+//   const { from, to, subject, html } = req.body;
+
+//   try {
+//     const { data, error } = await resend.emails.send({ from, to, subject, html });
+
+//     if (error) {
+//       console.error('Error sending email:', error);
+//       res.status(500).json({ error: 'Internal Server Error' });
+//     } else {
+//       // console.log('Email sent successfully:', data);
+//       res.json({ success: true });
+//     }
+//   } catch (error) {
+//     console.error('An unexpected error occurred:', error);
+//     res.status(500).json({ error: 'Internal Server Error' });
+//   }
+// });
 app.post('/submit-form', async (req, res) => {
-  const token = req.body['cf-turnstile-response'];
-  const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET; // Use the secret key from .env
+  const { 'cf-turnstile-response': token, name, email, message } = req.body;
+  const secretKey = process.env.CLOUDFLARE_TURNSTILE_SECRET;
 
   try {
-    const response = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
+    // First, verify the CAPTCHA
+    const verificationResponse = await axios.post('https://challenges.cloudflare.com/turnstile/v0/siteverify', null, {
       params: {
         secret: secretKey,
         response: token,
       },
     });
 
-    const verificationResult = response.data;
+    const verificationResult = verificationResponse.data;
 
     if (verificationResult.success) {
-      // CAPTCHA was successfully solved
-      // Proceed with form submission handling
-      res.send('CAPTCHA verified successfully!');
+      // CAPTCHA was successfully solved, now proceed with sending an email
+      const emailContent = {
+        from: 'works@yesbhautik.co.in', // The sender's email address
+        to: 'yashu.shah28@gmail.com', // The recipient's email address, submitted by the form
+        subject: 'Contact Form Submission',
+        html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`, // The email content
+      };
+
+      const { data, error } = await resend.emails.send(emailContent);
+
+      if (error) {
+        console.error('Error sending email:', error);
+        return res.status(500).json({ error: 'Internal Server Error while sending email' });
+      } else {
+        // Email sent successfully
+        return res.json({ success: true, message: 'CAPTCHA verified and email sent successfully!' });
+      }
     } else {
       // CAPTCHA verification failed
-      res.status(400).send('CAPTCHA verification failed.');
+      return res.status(400).send('CAPTCHA verification failed.');
     }
   } catch (error) {
-    console.error('CAPTCHA verification error:', error);
-    res.status(500).send('Server error during CAPTCHA verification.');
-  }
-});
-
-// Create Resend instance using environment variable
-const resend = new Resend(process.env.RESEND_API);
-
-// Route for sending emails
-app.post('/send-email', async (req, res) => {
-  const { from, to, subject, html } = req.body;
-
-  try {
-    const { data, error } = await resend.emails.send({ from, to, subject, html });
-
-    if (error) {
-      console.error('Error sending email:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    } else {
-      // console.log('Email sent successfully:', data);
-      res.json({ success: true });
-    }
-  } catch (error) {
-    console.error('An unexpected error occurred:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error('Error during CAPTCHA verification or email sending:', error);
+    return res.status(500).send('Server error during CAPTCHA verification or email sending.');
   }
 });
 
