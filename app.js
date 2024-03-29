@@ -9,7 +9,7 @@ const fs = require('fs');
 const cloudinary = require('cloudinary').v2;
 const { promisify } = require('util');
 const app = express();
-const port = 3000;
+const port = 3001;
 const { setupWatcher, uploadExistingImages, imageExistenceCache } = require('./cloudinaryManager');
 const cloudinaryMiddleware = require('./cloudinaryMiddleware');
 
