@@ -201,6 +201,19 @@
         if (resetOffset) {
           $('.grid').empty();
         }
+        if (response.projects.length === 0) {
+  // Check if the current category is not "All" before adding the "Coming Soon" container
+  if (currentCategory !== 'All') {
+    if ($('.projects-collection-list .coming-soon-container').length === 0) {
+      const comingSoonHTML = `
+        <div class="coming-soon-container">
+          <h1 class="coming-soon-message">Coming Soon🧪</h1>
+          <p class="coming-soon-submessage">*Projects will be published soon</p>
+        </div>`;
+      $('.projects-collection-list').append(comingSoonHTML);
+    }
+  }
+      } else {
         response.projects.forEach(project => {
         // Construct the Cloudinary image URL
         const imageName = project.images[0].split('/').pop(); // Get the image file name
@@ -241,6 +254,7 @@
         // Append the updated project HTML to the grid
         $('.grid').append(projectHTML);
       });
+    }
       offset += response.projects.length;
       $('.load-more-button').toggle(response.hasMore);
 
@@ -261,18 +275,29 @@
       currentCategory = $(this).data('category');
       currentSubcategory = 'All'; 
       $('.main-category').hide();
-      $('.subcategory-container').hide();
-      $('.subcategory.' + currentCategory).parent().css('display', 'flex');
-      $('.subcategory.' + currentCategory + ' .button.all').addClass('selected');
-      $('#go-back-button').show();
-      fetchProjects(true);
-    });
 
+  if (currentCategory === 'ai') {
+    // If it is "ai", directly fetch projects without showing subcategories
+    fetchProjects(true);
+    $('.main-category').show();
+    $('.ai').addClass('selected');
+    $('.show-all').removeClass('selected');
+  } else {
+    // For other categories, show the subcategories container
+    $('.projects-collection-list .coming-soon-container').remove();
+    $('.subcategory-container').hide();
+    $('.subcategory.' + currentCategory).parent().css('display', 'flex');
+    $('.subcategory.' + currentCategory + ' .button.all').addClass('selected');
+    $('#go-back-button').show();
+    fetchProjects(true);
+  }
+});
     
 
 
     $('.subcategory .button.subcategory').click(function() {
   currentSubcategory = $(this).data('subcategory');
+  $('.projects-collection-list .coming-soon-container').remove();
   $('.subcategory .button').removeClass('selected'); 
   $(this).addClass('selected'); 
   fetchProjects(true); 
@@ -281,6 +306,7 @@
 // "All" subcategory button event listener
 $('.subcategory .button.all').click(function() {
   currentSubcategory = 'All';
+  $('.projects-collection-list .coming-soon-container').remove();
   $('.subcategory .button').removeClass('selected'); 
   $(this).addClass('selected'); 
   fetchProjects(true); 
@@ -296,6 +322,7 @@ $('.subcategory .button.all').click(function() {
       $('.subcategory-container').hide();
       $('#go-back-button').hide();
       fetchProjects(true);
+      $('.coming-soon-container').remove();
     });
   // "Go Back" button event listener
   $('#go-back-button').click(function() {
@@ -306,7 +333,7 @@ $('.subcategory .button.all').click(function() {
     $('.main-category .button.category, .subcategory .button.subcategory').removeClass('selected'); 
     $('.show-all').addClass('selected');
     $(this).hide(); 
-    
+    $('.projects-collection-list .coming-soon-container').remove();
   });
     // "Load More" button event listener
     $('.load-more-button').click(function() {

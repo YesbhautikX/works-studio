@@ -11,6 +11,36 @@ right: 20px;
 cursor: pointer;
 font-size: 16px;
 }
+.contact-link{
+  margin-bottom: 12px;
+}
+.contact-link:hover{
+  text-decoration: none;
+  color: #797979;
+}
+.copyright-link:hover{
+  text-decoration: none;
+  
+}
+.coming-soon-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.coming-soon-message {
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px; 
+  text-align: center;/* Adjust space between main message and submessage */
+}
+
+.coming-soon-submessage {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+}
+
 
 .Select-category {
 border: none;

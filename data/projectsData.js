@@ -2,7 +2,7 @@
 const projects = [
   {
     id: 'ahb8yv7',
-    name: 'HeritageHue',
+    name: 'HeritageHue (Artist)',
     images: [
       '/images/jfo2q30_ahb8yv7_1.png',
       '/images/jfo2q30_ahb8yv7_2.png',
@@ -12,7 +12,7 @@ const projects = [
     ],
     year: '2023',
     client: 'Web Client',
-    services: ['Web Design', 'UI/UX'],
+    services: ['Web Design', 'Artist'],
     projectLink: 'https://s1-eyeson.yesbhautikx.co.in/jfo2q30/ahb8yv7',
     "concept": "In the digital age, where every artist desires a gallery, YesbhautikX proudly presents HeritageHue - a vibrant online platform designed to showcase the exquisite artistry of creators worldwide. Launched with a vision to bridge the gap between artists and art aficionados, HeritageHue is more than just a website; it's a sanctuary where creativity knows no bounds, and every stroke tells a story. \n\n At YesbhautikX, we understand the essence of art and the soulful journey of an artist. With this understanding, we meticulously crafted HeritageHue, ensuring it serves as the perfect canvas for artists to display their masterpieces. \n\n Our dedicated team at YesbhautikX has invested immense passion and effort into developing HeritageHue, employing cutting-edge technology to ensure a seamless and immersive experience for both artists and viewers. The platform stands as a testament to our commitment to empowering creativity and making art accessible to all.  ",
     category: 'web-design',
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: 'xue6455',
-    name: 'Pictura Peak',
+    name: 'Pictura Peak (Artist)',
     images: [
       '/images/jfo2q30_xue6455_1.png',
       '/images/jfo2q30_xue6455_2.png',
@@ -39,7 +39,7 @@ const projects = [
   },
   {
     id: 'v87nw67',
-    name: 'ByteBeat',
+    name: 'ByteBeat (Blog)',
     images: [
       '/images/5zj419k_v87nw67_1.png',
       '/images/5zj419k_v87nw67_2.png',
@@ -57,7 +57,7 @@ const projects = [
   },
   {
     id: 'b9e2m5d',
-    name: 'Pivotify',
+    name: 'Pivotify (Corporate)',
     images: [
       '/images/l4gzocf_b9e2m5d_1.png',
       '/images/l4gzocf_b9e2m5d_2.png',
@@ -76,7 +76,7 @@ const projects = [
   },
   {
     id: '6y6thor',
-    name: 'Innovify',
+    name: 'Innovify (Corporate)',
     images: [
       '/images/l4gzocf_6y6thor_1.png',
       '/images/l4gzocf_6y6thor_2.png',
@@ -95,7 +95,7 @@ const projects = [
   },
   {
     id: 'ybipoj1',
-    name: 'Glowist',
+    name: 'Glowist (E-commerce)',
     images: [
       '/images/czr6hrk_ybipoj1_1.png',
       '/images/czr6hrk_ybipoj1_2.png',
@@ -114,7 +114,7 @@ const projects = [
   },
   {
     id: 'v346z7j',
-    name: 'Trend Corner',
+    name: 'Trend Corner (E-commerce)',
     images: [
       '/images/czr6hrk_v346z7j_1.png',
       '/images/czr6hrk_v346z7j_2.png',
@@ -133,7 +133,7 @@ const projects = [
   },
   {
     id: 'fhjtboq',
-    name: 'Bakeburst',
+    name: 'Bakeburst (Food)',
     images: [
       '/images/57po1v4_fhjtboq_1.png',
       '/images/57po1v4_fhjtboq_2.png',
@@ -152,7 +152,7 @@ const projects = [
   },
   {
     id: 'vyvywz4',
-    name: 'Munch Joy',
+    name: 'Munch Joy (Food)',
     images: [
       '/images/57po1v4_vyvywz4_1.png',
       '/images/57po1v4_vyvywz4_2.png',
@@ -171,7 +171,7 @@ const projects = [
   },
   {
     id: '50ldtqc',
-    name: 'Propelio',
+    name: 'Propelio (Real Estate)',
     images: [
       '/images/9al1alm_50ldtqc_1.png',
       '/images/9al1alm_50ldtqc_2.png',
@@ -190,7 +190,7 @@ const projects = [
   },
   {
     id: 'myi5xxl',
-    name: 'UrbanPulse',
+    name: 'UrbanPulse (Real Estate)',
     images: [
       '/images/9al1alm_myi5xxl_1.png',
       '/images/9al1alm_myi5xxl_2.png',
@@ -209,7 +209,7 @@ const projects = [
   },
    {
     id: 'aih5wgm',
-    name: 'Forkify',
+    name: 'Forkify (Restaurant)',
     images: [
       '/images/zs59r8v_aih5wgm_1.png',
       '/images/zs59r8v_aih5wgm_2.png',
@@ -228,7 +228,7 @@ const projects = [
   },
   {
     id: 'ozlwozw',
-    name: 'Fusion',
+    name: 'Fusion (Restaurant)',
     images: [
       '/images/zs59r8v_ozlwozw_1.png',
       '/images/zs59r8v_ozlwozw_2.png',
@@ -247,7 +247,7 @@ const projects = [
   },
   {
     id: 'ody40r0',
-    name: 'Blocka',
+    name: 'Blocka (Web3)',
     images: [
       '/images/n9zirpd_ody40r0_1.png',
       '/images/n9zirpd_ody40r0_2.png',
@@ -266,7 +266,7 @@ const projects = [
   },
   {
     id: 'ameqdji',
-    name: 'MInt Robotos',
+    name: 'MInt Robotos (Web3)',
     images: [
       '/images/n9zirpd_ameqdji_1.png',
       '/images/n9zirpd_ameqdji_2.png',
@@ -285,7 +285,7 @@ const projects = [
   },
   {
     id: '650qf7o',
-    name: 'BlockZen',
+    name: 'BlockZen (Web3)',
     images: [
       '/images/n9zirpd_650qf7o_1.png',
       '/images/n9zirpd_650qf7o_2.png',
@@ -301,177 +301,8 @@ const projects = [
     category: 'web-design',
     subcategory: 'Web3'
    
-  },
-  {
-    id: 'ui/ux',
-    name: 'UI/UX',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'graphic-design',
-    subcategory: 'ui/ux'
-
-  },
-  {
-    id: 'brand-kit',
-    name: 'Brand Kit',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'graphic-design',
-    subcategory: 'brand-kit'
-  },
-  {
-    id: 'mockups',
-    name: 'Mockups',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'graphic-design',
-    subcategory: 'mockups'
-
-  },
-  {
-    id: 'logo',
-    name: 'Logo',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'graphic-design',
-    subcategory: 'logo'
-
-  },
-  {
-    id: 'business-card',
-    name: 'Business Card',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'graphic-design',
-    subcategory: 'business-card'
-
-  },
-  {
-    id: 'posters',
-    name: 'Posters',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'graphic-design',
-    subcategory: 'posters'
-
-  },
-  {
-    id: 'ai-magic',
-    name: 'Ai Magic',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'ai',
-    subcategory: 'ai-magic'
-
-  },
-  {
-    id: 'whatsapp-bot',
-    name: 'Whatsapp bot',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'chatbot',
-    subcategory: 'whatsapp-bot'
-
-  },
-  {
-    id: 'telegram-bot',
-    name: 'Telegram bot',
-    images: [
-      '/images/63d4058cfedfe129254229b5_Unbuilt_1.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_2.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_4.jpg',
-      '/images/63d4058cc72f98084cc9dae7_Unbuilt_3.jpg'
-      // ... other image URLs
-    ],
-    year: '2023',
-    client: 'Web Client',
-    services: ['Graphic Design', 'UI/UX'],
-    projectLink: 'https://unbuilt.website',
-    concept: 'Concept text for Unbuilt Website...',
-    category: 'chatbot',
-    subcategory: 'telegram-bot'
-
-  },
+  }
+ 
 ];
 
-module.exports = projects;
+module.exports = projects;  
