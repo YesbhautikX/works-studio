@@ -181,20 +181,24 @@ const { Readable } = require('stream');
 
 app.get('/sitemap.xml', async (req, res) => {
   const staticUrls = [
-    { url: '/', changefreq: 'daily', priority: 0.7 },
-    { url: '/about', changefreq: 'monthly', priority: 0.6 },
-    { url: '/contact', changefreq: 'monthly', priority: 0.6 },
+    { url: '/', changefreq: 'daily', priority: 1.0 },
+    { url: '/about', changefreq: 'monthly', priority: 0.8 },
+    { url: '/contact', changefreq: 'monthly', priority: 0.8 },
   ];
 
   // Generate dynamic URLs from your projectsData
   const dynamicUrls = projectsData.map(project => ({
-    url: `/projects/${project.id}`, changefreq: 'weekly', priority: 0.8
+    url: `/projects/${project.id}`, changefreq: 'weekly', priority: 0.7
   }));
 
   const allUrls = [...staticUrls, ...dynamicUrls];
 
   try {
-    const sitemapStream = new SitemapStream({ hostname: 'https://works.yesbhautikx.co.in' });
+    const sitemapStream = new SitemapStream({ hostname: 'https://works.yesbhautikx.co.in', xmlns: {
+      image: true,
+      video: true,
+
+    }});
     const xmlStream = new Readable({
       read() {
         allUrls.forEach(url => sitemapStream.write(url));
