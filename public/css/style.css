@@ -63,15 +63,17 @@ background: linear-gradient(45deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
   position: absolute;
   top: -1px;
   left:-1px;
-  background-size: 400%;
-  z-index: -1; 
+  background-size: 400% 400%;
+    z-index: -1; 
+    
   width: calc(100% + 2px);
   height: calc(100% + 2px);
-  animation: glowing 3s linear infinite;
+  animation: glowing 10s linear infinite;
   opacity: 1;
-  transition: opacity .3s ease;
+  transition:  opacity .3s ease-in-out;
   border-radius: 10px;
 }
+
 .Select-category:before {
 content: '';
 background: linear-gradient(45deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);  position: absolute;
@@ -109,11 +111,15 @@ opacity: 0;
 }
 
 @keyframes glowing {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
- 
- 
-
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
 @keyframes glowing-before {
 
