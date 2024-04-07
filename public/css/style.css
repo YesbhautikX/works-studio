@@ -141,6 +141,11 @@ margin-top: 0px;
 display: none;
 }
 
+.pricing-plan{
+  list-style: none;
+}
+
+
 #backtotop-btn {
 visibility: hidden;
 position: fixed;
@@ -154,9 +159,55 @@ transition: 1s;
 
 .project-name:hover{
 color: #858585;
-
 }
 
+
+strong {
+  font-size: 1em; /* Slightly larger font for headings */
+}
+
+.pricing-plan {
+  list-style: none;
+  padding: 0;
+  /* background-color: #f9f9f9; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+  /* margin-bottom: 20px; */
+  /* padding: 20px; */
+}
+
+.pricing-plan li {
+  padding: 5px 0;
+  font-size: 0.9em; /* Standard font size for list items */
+}
+
+.pricing-plan li:last-child {
+  border-bottom: none;
+}
+
+.pricing-plan li:before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.pricing-plan-title{
+  color: #797979;
+  margin-top: 0px;
+    margin-bottom: 5px;
+  
+}
+
+
+
+/* Note styling */
+.note {
+  font-size: 0.9em; /* Smaller font size for notes */
+  color: #666; /* Light grey for notes */
+  margin-top: 20px; /* Spacing above the note */
+}
 .backbutton {
 position: relative;
 width: 51px;

@@ -2520,7 +2520,7 @@ figcaption {
 }
 
 .rich-text-block li {
-  list-style-type: decimal;
+  /* list-style-type: decimal; */
 }
 
 .rich-text-block p {

@@ -47,12 +47,17 @@
               <h6>Project</h6>
               <p><a href="<%= project.projectLink %>" target="_blank"><%= project.name %></a></p>
             </div>
+            <div class="project-info-wrapper">
+              <!-- <h6>Plan</h6> -->
+              <%- project.plan %>
+            </div>
             <!-- ... -->
           </div>
           <div class="grid-block">
             <p class="text-color-grey">Concept</p>
             <div class="rich-text-block y-richtext">
-              <%- project.concept.split("\n\n").map(paragraph => `<p>${paragraph}</p>`).join("") %>
+              <!-- <%- project.concept.split("\n\n").map(paragraph => `<p>${paragraph}</p>`).join("") %> -->
+              <%- project.concept %>
             </div>
           </div>
         </div>
