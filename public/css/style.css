@@ -200,14 +200,17 @@ strong {
   
 }
 
-
-
 /* Note styling */
 .note {
   font-size: 0.9em; /* Smaller font size for notes */
   color: #666; /* Light grey for notes */
   margin-top: 20px; /* Spacing above the note */
 }
+
+.team-member-info {
+  text-align: left;
+}
+
 .backbutton {
 position: relative;
 width: 51px;
