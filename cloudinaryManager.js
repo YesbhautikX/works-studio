@@ -16,18 +16,18 @@ cloudinary.config({
     const fileName = path.basename(localFilePath);
     const publicId = `${process.env.CLOUDINARY_FOLDER}/${path.parse(fileName).name}`;
   
-    // console.log(`Attempting to check or upload image: ${fileName}`);
+   // console.log(`Attempting to check or upload image: ${fileName}`);
   
     try {
       // Check local cache first to see if the image was previously deleted
       if (imageExistenceCache[publicId] === false) {
-        // console.log(`Image was deleted from Cloudinary, re-uploading: ${fileName}`);
+       // console.log(`Image was deleted from Cloudinary, re-uploading: ${fileName}`);
         // Clear the cache entry since we're going to re-upload the image
         delete imageExistenceCache[publicId];
       } else {
         // Check if the image is already uploaded to avoid re-uploading
         const resource = await cloudinary.api.resource(publicId);
-        // console.log(`Image ${fileName} is already uploaded. Resource ID: ${resource.public_id}`);
+       // console.log(`Image ${fileName} is already uploaded. Resource ID: ${resource.public_id}`);
         return; // Image exists, no need to re-upload
       }
     } catch (error) {
@@ -45,14 +45,15 @@ cloudinary.config({
       folder: process.env.CLOUDINARY_FOLDER,
       public_id: path.parse(fileName).name,
       overwrite: false,
+      
     });
-    // console.log(`Upload successful. Public ID: ${uploadResponse.public_id}`);
+   // console.log(`Upload successful. Public ID: ${uploadResponse.public_id}`);
   }
   
   async function deleteImageFromCloudinary(publicId) {
     try {
       const result = await cloudinary.uploader.destroy(publicId);
-      // console.log(`Deleted image with Public ID: ${publicId}`, result);
+     // console.log(`Deleted image with Public ID: ${publicId}`, result);
       
       // Update the local cache to indicate the image has been deleted
       if (result.result === 'ok') {
@@ -72,11 +73,11 @@ cloudinary.config({
   
     watcher
       .on('add', (filePath) => {
-        // console.log(`File ${filePath} has been added`);
+       // console.log(`File ${filePath} has been added`);
         uploadImageToCloudinary(filePath).catch(console.error);
       })
       .on('unlink', (filePath) => {
-        // console.log(`File ${filePath} has been removed`);
+       // console.log(`File ${filePath} has been removed`);
         // Extract the file name without the extension to use as the public ID
         const fileName = path.basename(filePath, path.extname(filePath));
         const publicId = `${process.env.CLOUDINARY_FOLDER}/${fileName}`;

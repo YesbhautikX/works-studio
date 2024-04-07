@@ -80,8 +80,8 @@ plan:  `<p class="pricing-plan-title">Pricing Plans:</p>
     name: 'Master AI Bot',
     images: [
       '/images/6c274fe_2zcprom_4.png',
-      '/images/6c274fe_2zcprom_2.png',
       '/images/6c274fe_2zcprom_1.png',
+      '/images/6c274fe_2zcprom_2.png',
       '/images/6c274fe_2zcprom_3.png',
    
     ],
