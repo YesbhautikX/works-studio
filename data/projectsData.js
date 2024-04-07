@@ -52,21 +52,21 @@ plan:  `<p class="pricing-plan-title">Pricing Plans:</p>
 <strong>Individual:</strong> $15/month<br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
-  <li class="cross">❌ "Managed" White Labeling</li>
+  <li class="cross">❌ “Managed” White Labeling</li>
   <li class="cross">❌ Multiple users</li>
   <li class="cross">❌ Reselling</li>
 </ul>
 <strong>Enterprise:</strong> $149/month + $13/user/month<br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
-  <li class="check">✅ "Managed" White Labeling</li>
+  <li class="check">✅ “Managed” White Labeling</li>
   <li class="check">✅ Allows for multiple users</li>
   <li class="cross">❌ Reselling</li>
 </ul>
 <strong>Reseller:</strong> $199/month + $13/user/month<br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
-  <li class="check">✅ "Managed" White Labeling</li>
+  <li class="check">✅ “Managed” White Labeling</li>
   <li class="check">✅ Allows for multiple users</li>
   <li class="check">✅ Reselling</li>
 </ul>

@@ -2878,7 +2878,9 @@ figcaption {
 .no-decoration-link.all-width {
   display: block;
 }
-
+.no-decoration-link.half-width {
+  display: inline;
+}
 .horizontal-line {
   width: 100%;
   height: 1px;
