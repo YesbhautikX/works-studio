@@ -49,21 +49,21 @@ Whether for personal use or business, with options for white labeling and resell
   </li>
 </ul>`,
 plan:  `<p class="pricing-plan-title">Pricing Plans:</p>
-<strong>Individual:</strong> $15/month<br>
+<strong>Individual</strong><br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
   <li class="cross">❌ “Managed” White Labeling</li>
   <li class="cross">❌ Multiple users</li>
   <li class="cross">❌ Reselling</li>
 </ul>
-<strong>Enterprise:</strong> $149/month + $13/user/month<br>
+<strong>Enterprise</strong><br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
   <li class="check">✅ “Managed” White Labeling</li>
   <li class="check">✅ Allows for multiple users</li>
   <li class="cross">❌ Reselling</li>
 </ul>
-<strong>Reseller:</strong> $199/month + $13/user/month<br>
+<strong>Reseller</strong><br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
   <li class="check">✅ “Managed” White Labeling</li>
