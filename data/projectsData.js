@@ -48,7 +48,7 @@ Whether for personal use or business, with options for white labeling and resell
     </ul>
   </li>
 </ul>`,
-plan:  `<p class="pricing-plan-title">Pricing Plans:</p>
+plan:  `<p class="pricing-plan-title">Plans:</p>
 <strong>Individual</strong><br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
