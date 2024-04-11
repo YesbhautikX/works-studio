@@ -3,7 +3,7 @@ const projects = [
   
   {
     id: 'hw8b9za',
-    name: 'YesbhautikX GPT',
+    name: 'FalvorGPT',
     images: [
       '/images/hw8b9za_1.png',
       '/images/hw8b9za_2.png',
@@ -15,8 +15,8 @@ const projects = [
     client: 'AI Tools Client',
     services: ['AI APIS', 'AI Tools'],
     projectLink: 'https://works.yesbhautikx.co.in/contact', 
-    concept: `Introducing our latest creation, the <strong>YesbhautikX GPT</strong>, a game-changer in the world of AI and digital tools. This isn't just another tool, it's your gateway to a world of unlimited AI possibilities, all at an unbeatable cost.<br><br>
-Whether for personal use or business, with options for white labeling and reselling, <strong>YesbhautikX GPT</strong> is set to revolutionize how you interact with AI. Get ready to elevate your tech game!<br><br>
+    concept: `Introducing our latest creation, the <strong>FalvorGPT</strong>, a game-changer in the world of AI and digital tools. This isn't just another tool, it's your gateway to a world of unlimited AI possibilities, all at an unbeatable cost.<br><br>
+Whether for personal use or business, with options for White Labelling and reselling, <strong>FalvorGPT</strong> is set to revolutionize how you interact with AI. Get ready to elevate your tech game!<br><br>
 <p class="pricing-plan-title">Highlights:</p>
 <ul>
   <li>Classic & Minimal UI</li>
@@ -34,42 +34,43 @@ Whether for personal use or business, with options for white labeling and resell
   <li>Exclusive Multi-Device Support (of Owner only)</li>
   <li>Additional LLMs and Tools at affordable price</li>
   <li>White label for enterprise & resellers</li>
-  <li>Granted Privacy of your data</li>
+  <li>Your data privacy is assured</li>
   <li>Installable on All devices with PWA</li>
   <li>LLMs included in Individual Plan
     <ul>
-      <li>GPT versions 3.5 Turbo, 4, 4 Turbo, and 4 (0129)</li>
+      <li>GPT versions 3.5 Turbo, 4, 4 Turbo, and 4 (0125)</li>
       <li>Mixtral: Large, Small, Tiny, Medium</li>
       <li>Gemini Models: Pro, Pro-vision</li>
       <li>LLaMA Models</li>
       <li>Cohere Models</li>
-      <li>Claude, available with limited uses.</li>
-      <li>Exciting new models to be announced.</li>
+      <li>Claude, available with limited uses*</li>
+      <li>Exciting new models to be announced</li>
     </ul>
   </li>
 </ul>`,
 plan:  `<p class="pricing-plan-title">Plans:</p>
-<strong>Individual</strong><br>
+<strong>Individual</strong> - <a href="https://rzp.io/i/b0oT8YAa" class="copyright-link no-decoration-link">Get Started</a><br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
-  <li class="cross">❌ “Managed” White Labeling</li>
+  <li class="cross">❌ “Managed” White Labelling</li>
   <li class="cross">❌ Multiple users</li>
   <li class="cross">❌ Reselling</li>
 </ul>
 <strong>Enterprise</strong><br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
-  <li class="check">✅ “Managed” White Labeling</li>
+  <li class="check">✅ “Managed” White Labelling</li>
   <li class="check">✅ Allows for multiple users</li>
   <li class="cross">❌ Reselling</li>
 </ul>
 <strong>Reseller</strong><br>
 <ul class="pricing-plan">
   <li class="check">✅ Common features</li>
-  <li class="check">✅ “Managed” White Labeling</li>
+  <li class="check">✅ “Managed” White Labelling</li>
   <li class="check">✅ Allows for multiple users</li>
   <li class="check">✅ Reselling</li>
 </ul>
+<p>For inquiries related to Enterprise, reseller, referrals, and exclusive discounts, please <a href="http://localhost:3000/contact" class="copyright-link no-decoration-link" > contact us </a> for further information. </p>
 <div class="note">
   Note: Our White Label and Reselling plans include everything you need—servers, deployment, and LLM costs are all covered, ensuring a worry-free solution for your business needs.
 </div>`,
