@@ -74,6 +74,7 @@ const axios = require('axios');
 const cloudinary = require('cloudinary').v2;
 const { imageExistenceCache } = require('./cloudinaryManager');
 
+
 module.exports = async (req, res, next) => {
   let send = res.send;
   res.send = function (body) {
@@ -97,11 +98,9 @@ module.exports = async (req, res, next) => {
               console.log(`Serving local image: ${src}`);
             } else {
               const mainImage = cloudinary.url(publicId, {
-                secure: true,
-                transformation: [
-                  { fetch_format: "auto", quality: "auto" } // Example main image transformation
+                secure: true,                transformation: [
                 ]
-              });
+              })  ;
               const vectorizedPlaceholder = cloudinary.url(publicId, {
                 secure: true,
                 transformation: [
