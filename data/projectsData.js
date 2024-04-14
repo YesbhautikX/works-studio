@@ -93,6 +93,32 @@ Whether for personal use or business, with options for White Labelling and resel
     subcategory: "telegram-bot",
   },
   {
+    id: "d6xv544",
+    name: "TTweetY Connect",
+    images: [
+      "/images/6c274fe_d6xv544_1.png",
+      "/images/6c274fe_d6xv544_2.png",
+      "/images/6c274fe_d6xv544_3.png",
+      "/images/6c274fe_d6xv544_4.png",
+      "/images/6c274fe_d6xv544_5.png"
+    ],
+    year: "2024",
+    client: "TTweetY Connect Client",
+    services: ["Telegram Bot", "Twitter Bot"],
+    projectLink: "https://github.com/yesbhautik/TTweetY-Connect",
+    concept:
+      `Welcome to the world of TTweetY Connect, where social media meets automation. This project is your one-stop solution for enhancing your social media presence, whether you're a content creator, community manager, or just someone looking to up their social media game. <br><br> With TTweetY Connect, you can automate the process of creating and managing posts on Telegram, and even directly post content on Twitter, provided it meets Twitter's posting guidelines.<br><br><strong>Features Galore
+      </strong><br>   
+      <ul>  
+      <li>Multi-Image Posting: Share up to four images on Twitter, adhering to Twitter's image posting limitations, to amplify engagement and visual storytelling.</li><br>
+      <li>Cross-Platform Poll Integration: Extend your Telegram polls to Twitter by automatically reposting them, ensuring consistent engagement across platforms and maximizing audience participation.</li><br>
+      <li>Individual Media Posting: Share captivating images or videos with optional captions on Twitter to convey your message effectively and engage your audience with compelling visual content.</li><br>
+      <li>Text Tweeting: Broadcast text-based updates or announcements on Twitter to keep your followers informed and engaged with your latest developments or insights.</li>
+    </ul>`,
+    category: "chatbot",
+    subcategory: "telegram-bot",
+  },
+  {
     id: "ahb8yv7",
     name: "HeritageHue",
     images: [
