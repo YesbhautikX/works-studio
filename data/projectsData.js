@@ -10,7 +10,7 @@ const projects = [
       "/images/hw8b9za_4.png",
     ],
     year: "2024",
-    client: "AI Tools Client",
+    client: "YesbhautikX Product",
     services: ["AI APIS", "AI Tools"],
     projectLink: "https://works.yesbhautikx.co.in/contact",
     concept: `Introducing our latest creation, the <strong>FalvorGPT</strong>, a game-changer in the world of AI and digital tools. This isn't just another tool, it's your gateway to a world of unlimited AI possibilities, all at an unbeatable cost.<br><br>
@@ -84,7 +84,7 @@ Whether for personal use or business, with options for White Labelling and resel
       "/images/6c274fe_2zcprom_3.png",
     ],
     year: "2024",
-    client: "Telegram Bot Client",
+    client: "YesbhautikX Product",
     services: ["Telegram Bot", "AI Chatbot"],
     projectLink: "https://t.me/Master_AI_YESBHAUTIK_BOT",
     concept:
@@ -103,7 +103,7 @@ Whether for personal use or business, with options for White Labelling and resel
       "/images/6c274fe_d6xv544_5.png"
     ],
     year: "2024",
-    client: "TTweetY Connect Client",
+    client: "YesbhautikX Product",
     services: ["Telegram Bot", "Twitter Bot"],
     projectLink: "https://github.com/yesbhautik/TTweetY-Connect",
     concept:
