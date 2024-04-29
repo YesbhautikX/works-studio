@@ -2,7 +2,7 @@
 const projects = [
   {
     id: "hw8b9za",
-    name: "FalvorGPT",
+    name: "FlavorGPT",
     images: [
       "/images/hw8b9za_1.png",
       "/images/hw8b9za_2.png",
@@ -13,8 +13,8 @@ const projects = [
     client: "YesbhautikX Product",
     services: ["AI APIS", "AI Tools"],
     projectLink: "https://works.yesbhautikx.co.in/contact",
-    concept: `Introducing our latest creation, the <strong>FalvorGPT</strong>, a game-changer in the world of AI and digital tools. This isn't just another tool, it's your gateway to a world of unlimited AI possibilities, all at an unbeatable cost.<br><br>
-Whether for personal use or business, with options for White Labelling and reselling, <strong>FalvorGPT</strong> is set to revolutionize how you interact with AI. Get ready to elevate your tech game!<br><br>
+    concept: `Introducing our latest creation, the <strong>FlavorGPT</strong>, a game-changer in the world of AI and digital tools. This isn't just another tool, it's your gateway to a world of unlimited AI possibilities, all at an unbeatable cost.<br><br>
+Whether for personal use or business, with options for White Labelling and reselling, <strong>FlavorGPT</strong> is set to revolutionize how you interact with AI. Get ready to elevate your tech game!<br><br>
 <p class="pricing-plan-title">Highlights:</p>
 <ul>
   <li>Classic & Minimal UI</li>
