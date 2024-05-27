@@ -10,7 +10,7 @@ const projects = [
       "/images/hw8b9za_4.png",
     ],
     year: "2024",
-    client: "YesbhautikX Product",
+    client: "N/A",
     services: ["AI APIS", "AI Tools"],
     projectLink: "https://works.yesbhautikx.co.in/contact",
     concept: `Introducing our latest creation, the <strong>FlavorGPT</strong>, a game-changer in the world of AI and digital tools. This isn't just another tool, it's your gateway to a world of unlimited AI possibilities, all at an unbeatable cost.<br><br>
