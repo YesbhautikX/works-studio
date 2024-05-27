@@ -144,7 +144,10 @@ display: none;
 .pricing-plan{
   list-style: none;
 }
-
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+}
 
 #backtotop-btn {
 visibility: hidden;
