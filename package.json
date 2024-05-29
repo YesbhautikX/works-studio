@@ -1,5 +1,5 @@
 {
-  "name": "YesbhautikX Works",
+  "name": "yesbhautikx-works",
   "version": "1.0.0",
   "description": "YesbhautikX Portfolio Website",
   "licenses": [
@@ -45,6 +45,7 @@
     "express": "^4.19.2",
     "redis": "^4.6.11",
     "resend": "^2.0.0",
+    "serverless-http": "^3.2.0",
     "sitemap": "^7.1.1"
   }
 }

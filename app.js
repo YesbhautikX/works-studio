@@ -12,7 +12,7 @@ const app = express();
 const port = 3000;
 const { setupWatcher, uploadExistingImages, imageExistenceCache } = require('./cloudinaryManager');
 const cloudinaryMiddleware = require('./cloudinaryMiddleware');
-
+const serverless = require('serverless-http');
 
 // Set view engine and views path
 app.set('view engine', 'ejs');
@@ -231,3 +231,4 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+module.exports.handler = serverless(app);
